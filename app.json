@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/goodShow/goodShow",
+    "pages/fillMsg/fillMsg",
+    "pages/addTraveller/addTraveller",
+    "pages/coupon/coupon",
+    "pages/couponList/couponList",
+    "pages/protocol/protocol",
+    "pages/selectTraveller/selectTraveller",
+    "pages/orderlist/orderlist",
+    "pages/contactList/contactList",
+    "pages/needs/needs",
+    "pages/underpay/underpay",
+    "pages/repay/repay",
+    "pages/list/list",
+    "pages/login/login",
+    "pages/regist/regist",
+    "pages/changePwd/changePwd",
+    "pages/newPwd/newPwd",
+    "pages/mine/mine",
+    "pages/sex/sex",
+    "pages/aboutUs/aboutUs",
+    "pages/edit/edit",
+    "pages/userInfo/userInfo",
+    "pages/set/set",
+    "pages/recall/recall"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}
