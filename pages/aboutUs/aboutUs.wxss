@@ -1,0 +1,87 @@
+.about-container {
+	width: 100%;
+	height: 100vh;
+	background-color: #fff;
+	padding-top: 70rpx;
+}
+.about-deco {
+	width: 160rpx;
+	height: 160rpx;
+	border-radius: 50%;
+	margin: 0 auto;
+	background-color: pink;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(https://bugentuan.yoroliving.com/images/wall1.jpg);
+}
+.about-title {
+	text-align: center;
+	margin-top: 30rpx;
+	color: #262626;
+	font-size: 36rpx;
+}
+.about-en {
+	margin-top: 10rpx;
+	font-size: 24rpx;
+	color: #262626;
+	text-align: center;
+}
+.about-en:after {
+	content: '';
+	width: 180rpx;
+	height: 2rpx;
+	display: block;
+	margin: 0 auto;
+	margin-top: 16rpx;
+	background-color: #e9e9e9;
+}
+.about-detail {
+	margin-top: 30rpx;
+	padding-left: 44rpx;
+	padding-right: 44rpx;
+	font-size: 26rpx;
+	color: #686868;
+}
+.about-detail view {
+	margin-top: 50rpx;
+}
+
+
+/*.weui-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.weui-flex__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+
+.eachday {
+	display: inline-block;
+	width: 107.15rpx;
+	text-align: center;
+}
+.empty {
+	color: transparent;
+}
+.monthTitle {
+	width: 100%;
+}
+.eachWeek {
+	text-align: center;
+}
+.eachMonth {
+	text-align: center;
+}
+.color {
+	background-color: lightgreen;
+}
+.highlight {
+	background-color: indianred;
+}
+.normal, .noColor {
+	background-color: transparent;
+}*/

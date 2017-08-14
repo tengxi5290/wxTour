@@ -1,0 +1,389 @@
+/* pages/fillMsg/fillMsg.wxss */
+
+
+.under-border {
+    border-bottom: 1rpx solid #e9e9e9;
+}
+.depart-border {
+    border-bottom: 20rpx solid #e6f0f0;
+}
+/*商品信息*/
+.goods-name-block {
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    font-size: 30rpx;
+    color: #262626;
+}
+.goods-name {
+    line-height: 46rpx;
+    font-weight: bold;
+    padding-top: 36rpx;
+    padding-bottom: 36rpx;
+}
+.goods-details {
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+    font-size: 28rpx;
+}
+.mleft-20 {
+    margin-left: 20rpx;
+}
+/*出行人*/
+.traveller-block {
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+}
+.part-title {
+    line-height: 100rpx;
+    font-size: 30rpx;
+    color: #262626;
+    height: 100rpx;
+}
+.part-word {
+    float: left;
+}
+.choose-traveller-but {
+    border-radius: 10rpx;
+    height: 50rpx;
+    background-color: transparent;
+    line-height: 50rpx;
+    color: #262626;
+    font-size: 24rpx;
+    float: right;
+    margin-top: 28rpx;
+}
+.each-traveller {
+    line-height: 80rpx;
+}
+.each-traveller-title {
+    width: 120rpx;
+    line-height: 80rpx;
+    color: #262626;
+    font-size: 26rpx;
+    display: inline-block;
+    vertical-align: super;
+    position: relative;
+}
+.each-traveller-title:after {
+    content: '*';
+    color: #d35352;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.a-name {
+    display: inline-block;
+    margin-top: 30rpx;
+    font-size: 28rpx;
+    margin-left: 8rpx;
+    color: #262626;
+    width: 76%;
+}
+.direct-arrow {
+    float: right;
+    font-size: 28rpx;
+    color: #d0d0d0;
+    margin-top: 16rpx;
+}
+.special-arrow {
+    margin-top: 0;
+}
+/*联系人*/
+.host-block {
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+}
+.each-inp {
+    line-height: 80rpx;
+}
+.noAfter:after {
+    content: '';
+}
+.checkInp {
+    width: 40%;
+}
+.checkBut {
+    background-color: #49bcbd;
+    color: white;
+}
+.checkBut-disable {
+    background-color: #d0d0d0;
+    border: 1rpx solid #d0d0d0;
+}
+/*保险产品*/
+.insurance-block {
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+}
+.each-list {
+    height: 100rpx;
+}
+.text-block {
+    display: block;
+    line-height: 36rpx;
+}
+.i-name {
+    width: 404rpx;
+    font-size: 26rpx;
+    color: #262626;
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+    display: inline-block;
+}
+.i-number {
+    display: inline-block;
+}
+.i-check {
+    float: right;
+    display: inline-block;
+    margin-top: 30rpx;
+    border-radius: 50%;
+}
+.i-price {
+    font-size: 26rpx;
+    color: #d35352;
+    text-align: right;
+}
+.i-tips {
+    font-size: 26rpx;
+    color: #9d9d9d;
+    text-align: right;
+}
+/*优惠*/
+.bargin-block {
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+}
+.switch-but {
+    float: right;
+}
+.part-title-no {
+    height: 80rpx;
+    line-height: 80rpx;
+}
+/*特殊需求*/
+.special-need-block {
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+}
+/*接受协议*/
+.sure-block {
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    height: 120rpx;
+    line-height: 120rpx;
+}
+.switch-check {
+    float: none;
+}
+.i-link {
+    font-size: 26rpx;
+    color: #262626;
+}
+.i-i {
+    display: inline-block;
+    color: #49bcbd;
+}
+/*立即预订*/
+.go-immediate {
+    background-color: #262626;
+    padding-left: 24rpx;
+    height: 94rpx;
+    line-height: 94rpx;
+}
+.total-price {
+    color: #fff;
+    font-size: 26rpx;
+}
+.total-price-money {
+    color: #fff;
+    font-size: 34rpx;
+}
+.fee-details {
+    text-decoration: underline;
+    color: #49bcbd;
+    font-size: 22rpx;
+    display: inline-block;
+    margin-left: 100rpx;
+}
+.book-immedia {
+    background-color: #d35352;
+    color: white;
+    width: 250rpx;
+    height: 94rpx;
+    font-size: 36rpx;
+    line-height: 94rpx;
+    display: inline-block;
+    border-radius: 0;
+    float: right;
+}
+.disable-but {
+    background-color: #d35352;
+    color: white;
+    width: 250rpx;
+    height: 94rpx;
+    font-size: 36rpx;
+    line-height: 94rpx;
+    display: inline-block;
+    border-radius: 0;
+    float: right;
+}
+
+/*费用说明蒙版内容*/
+.fill-mask {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.75);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.hide {
+    display: none;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+#con {
+    height: 100vh;
+}
+
+.fee-block {
+    color: #fff;
+    padding-top: 40rpx;
+    padding-left: 34rpx;
+    padding-right: 34rpx;
+}
+.fee-title {
+    font-size: 36rpx;
+}
+.base-tour-fee {
+    margin-top: 40rpx;
+}
+.top-line {
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 30rpx;
+    border-bottom: 1rpx solid #e9e9e9;
+}
+.left-col {
+    float: left;
+}
+.right-col {
+    float: right;
+}
+.traveller-type {
+    margin-top: 20rpx;
+    color: #e9e9e9;
+    font-size: 26rpx;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.insurance-type-block {
+    margin-top: 40rpx;
+    height: 600rpx;
+}
+.each-insurance {
+    margin-top: 20rpx;
+}
+.each-insurance-line {
+    font-size: 26rpx;
+    margin-top: 12rpx;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.each-insurance-line:first {
+    margin-top: 0;
+}
+.bottom-summary {
+    width: 90%;
+    height: 216rpx;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 34rpx;
+    padding-right: 34rpx;
+}
+.total-prices {
+    line-height: 80rpx;
+    height: 80rpx;
+    font-size: 36rpx;
+    color: #ff5857;
+}
+.shut-mask {
+    width: 70rpx;
+    height: 70rpx;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50rpx;
+}
+
+/*说明蒙版*/
+.insurance-tips-mask {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.2);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+.insurance-tips-block {
+    width: 640rpx;
+    height: 810rpx;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 10rpx;
+    margin-top: 198rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+.i-title-line {
+    line-height: 80rpx;
+    height: 80rpx;
+    color: #262626;
+    font-size: 30rpx;
+    border-bottom: 1rpx solid #e9e9e9;
+    /*overflow: hidden;*/
+    clear: both;
+}
+.left-title {
+    display: inline-block;
+}
+.right-icon {
+    display: inline-block;
+    width: 36rpx;
+    height: 36rpx;
+    float: right;
+    margin-top: 12rpx;
+}
+.i-title {
+    color: #262626;
+    font-size: 28rpx;
+    margin-top: 30rpx;
+    margin-bottom: 20rpx;
+}
+.i-title:before {
+    width: 4rpx;
+    height: 32rpx;
+    background-color: #49bcbd;
+    margin-right: 20rpx;
+    display: inline-block;
+    content: '';
+    vertical-align: top;
+}
+.i-block {
+    margin-left: 24rpx;
+    color: #686868;
+    font-size: 26rpx;
+    line-height: 41rpx;
+}
+.inner-i {
+    height: 680rpx;
+}

@@ -1,0 +1,247 @@
+@import "../styles/fonts.wxss";
+/*该页面公用样式*/
+.order-container {
+	width: 100%;
+	height: 100vh;
+	background-color: #e6f0f0;
+}
+.weui-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.weui-flex__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+/*导航样式*/
+.navigator {
+	height: 80rpx;
+	line-height: 80rpx;
+	background-color: #fff;
+	color: #262626;
+	font-size: 28rpx;
+	text-align: center;
+}
+.each-nav {
+	display: inline-block;
+}
+.fixed {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	left: 0;
+	z-index: 99;
+	border-bottom: 20rpx solid #e6f0f0;
+}
+.relative {
+	position: relative;
+}
+.active {
+	border-bottom: 4rpx solid #49bcbd;
+}
+.yes {
+	border-bottom: 4rpx solid #49bcbd;
+}
+.no {
+	border-bottom: 4rpx solid transparent;
+}
+/*订单内容块公用样式*/
+.orders-blocks {
+	z-index: 1;
+	position: relative;
+}
+.each-order-block {
+	margin-top: 20rpx;
+	background-color: #fff;
+}
+.border-top-part {
+	padding-left: 24rpx;
+	padding-right: 24rpx;
+	border-bottom: 1rpx solid #e9e9e9;
+	padding-top: 30rpx;
+	padding-bottom: 30rpx;
+}
+.border-bottom-part {
+	padding-left: 24rpx;
+	padding-right: 24rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	text-align: right;
+	clear: both;
+	overflow: hidden;
+}
+.order-icon {
+	display: inline-block;
+	width: 45rpx;
+	height: 45rpx;
+	vertical-align: top;
+	color: #fff;
+	text-align: center;
+	line-height: 45rpx;
+	/*background-color: hotpink;*/
+	border-radius: 10rpx;
+}
+.order-title {
+	margin-left: 14rpx;
+	display: inline-block;
+	font-size: 30rpx;
+	line-height: 40rpx;
+	width: 260rpx;
+	overflow: hidden;
+	vertical-align: top;
+}
+.price-state {
+	/*background-color: gold;*/
+	float: right;
+	display: inline-block;
+	width: 120rpx;
+}
+.order-price {
+	text-align: right;
+	font-size: 30rpx;
+	width: 100%;
+}
+.order-state {
+	font-size: 24rpx;
+	text-align: right;
+	margin-top: 20rpx;
+}
+.order-details {
+	margin-top: 20rpx;
+	font-size: 24rpx;
+	margin-left: 59rpx;
+}
+.leave-port {
+	margin-top: 10rpx;
+	font-size: 24rpx;
+	margin-left: 59rpx;
+}
+.order-but {
+	height: 50rpx;
+	display: inline-block;
+	border-radius: 10rpx;
+	line-height: 50rpx;
+	font-size: 24rpx;
+	margin-top: 26rpx;
+	background-color: #fff;
+	border: none;
+}
+.but-mright {
+	margin-right: 30rpx;
+}
+/*根据不同状态改变每部分内容的样式*/
+
+/*红色的价格*/
+.normal-price {
+	color: #d35352;
+}
+/*取消的灰色*/
+.cancel-grey {
+	color: #d0d0d0;
+}
+
+/*订单标题的黑色*/
+.title-black {
+	color: #262626;
+}
+
+/*订单详情和出行状态的灰色*/
+.state-grey {
+	color: #aeaeae;
+}
+
+/*可用状态的按钮*/
+.but-usable {
+	border: 1rpx solid #49bcbd;
+	color: #49bcbd;
+}
+
+/*禁用状态的按钮*/
+.but-disable {
+	color: #d0d0d0;
+}
+
+/*红色按钮*/
+.but-red {
+	color: #d35352;
+	border: 1rpx solid #d35352;
+}
+
+/*青色icon*/
+.cyan-icon {
+	background-color: #49bcbd;
+}
+
+/*灰色icon*/
+.grey-icon {
+	background-color: #d0d0d0;
+}
+
+/*没有相关订单*/
+.no-order {
+	width: 100rpx;
+	height: 100rpx;
+	color: #49bcbd;
+	margin: 0 auto;
+	margin-top: 375rpx;
+	display: block;
+	background-color: pink;
+}
+.no-order-tip {
+	margin-top: 36rpx;
+	color: #9d9d9d;
+	font-size: 34rpx;
+	text-align: center;
+}
+
+
+
+.bottom-nav {
+	width: 100%;
+	/*height: 110rpx;*/
+	padding-top: 16rpx;
+	padding-bottom: 16rpx;
+	background-color: #262626;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	color: white;
+}
+.blocks {
+	display: block;
+	text-align: center;
+}
+.word-line {
+	font-size: 24rpx;
+}
+.cyan {
+	color: #49bcbd;
+}
+.white {
+	color: white;
+}
+
+
+.noTips {
+	width: 100%;
+	height: 100rpx;
+	margin: 0 auto;
+	top: 120rpx;
+	position: fixed;
+	z-index: 0;
+	display: block;
+	text-align: center;
+}
+.noTips text {
+	font-size: 100rpx;
+	color: #49bcbd;
+}
+.tipsWords {
+	display: block;
+	margin-top: 30rpx;
+	color: #ababab;
+	font-size: 30rpx;
+	text-align: center;
+}

@@ -1,0 +1,88 @@
+<view class="mine-container">
+	<view class="mine-bg">
+		<view class="mine-portrait" style="background-image: url({{dataList.avatar}});"></view>
+		<view class="mine-logo">{{dataList.name}}</view>
+	</view>
+	<view class="mine-list">
+		<view class="each-list" bindtap="allOrders">
+			<view class="each-list-icon"><text class="iconfont icon-quanbudingdan"></text></view>
+			<view class="each-list-title">全部订单</view>
+		</view>
+		<view class="each-list" bindtap="noPay">
+			<view class="each-list-icon"><text class="iconfont icon-weifukuan"></text></view>
+			<view class="each-list-title">待支付</view>
+		</view>
+		<view class="each-list" bindtap="noOut">
+			<view class="each-list-icon"><text class="iconfont icon-weichuhang"></text></view>
+			<view class="each-list-title">未出行</view>
+		</view>
+		<view class="each-list" bindtap="repays">
+			<view class="each-list-icon"><text class="iconfont icon-tuikuandan"></text></view>
+			<view class="each-list-title">退款单</view>
+		</view>
+	</view>
+	<view class="mine-coupon" bindtap="toCoupon">
+		<view class="mine-coupon-icon"><text class="iconfont icon-youhuiquan" style="color: #d35252;"></text></view>
+		<view class="mine-coupon-text">我的优惠券</view>
+		<view class="coupon-arrow">></view>
+	</view>
+	<view class="mine-set">
+		<view class="mine-coupon" bindtap="toSet">
+			<view class="mine-coupon-icon"><text class="iconfont icon-shezhi"></text></view>
+			<view class="mine-coupon-text">设置</view>
+			<view class="coupon-arrow">></view>
+		</view>
+		<view class="border"></view>
+		<view class="mine-coupon" bindtap="toRecall">
+			<view class="mine-coupon-icon"><text class="iconfont icon-yijianfankui"></text></view>
+			<view class="mine-coupon-text">意见反馈</view>
+			<view class="coupon-arrow">></view>
+		</view>
+	</view>
+	<view class="bottom-nav">
+		<div class="weui-flex">
+			<block wx:if="{{ page == 'index' }}">
+	            <div class="weui-flex__item" bindtap="toIndex">
+	            	<view class="icon-line blocks"><text class="iconfont icon-shouye"></text></view>
+	            	<view class="word-line blocks cyan">首页</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toOrder">
+	            	<view class="icon-line blocks"><text class="iconfont icon-quanbudingdan"></text></view>
+	            	<view class="word-line blocks">订单</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toMine">
+	            	<view class="icon-line blocks"><text class="iconfont icon-wode"></text></view>
+	            	<view class="word-line blocks">我的</view>
+	            </div>
+            </block>
+            <block wx:elif="{{ page == 'order' }}">
+	            <div class="weui-flex__item" bindtap="toIndex">
+	            	<view class="icon-line blocks"><text class="iconfont icon-shouye"></text></view>
+	            	<view class="word-line blocks">首页</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toOrder">
+	            	<view class="icon-line blocks"><text class="iconfont icon-quanbudingdan"></text></view>
+	            	<view class="word-line blocks cyan">订单</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toMine">
+	            	<view class="icon-line blocks"><text class="iconfont icon-wode"></text></view>
+	            	<view class="word-line blocks">我的</view>
+	            </div>
+            </block>
+            <block wx:elif="{{ page == 'mine' }}">
+	            <div class="weui-flex__item" bindtap="toIndex">
+	            	<view class="icon-line blocks"><text class="iconfont icon-shouye"></text></view>
+	            	<view class="word-line blocks">首页</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toOrder">
+	            	<view class="icon-line blocks"><text class="iconfont icon-quanbudingdan"></text></view>
+	            	<view class="word-line blocks">订单</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toMine">
+	            	<view class="icon-line blocks"><text class="iconfont icon-wode" style="color: #49bcbd;"></text></view>
+	            	<view class="word-line blocks cyan">我的</view>
+	            </div>
+            </block>
+        </div>
+	</view>
+</view>

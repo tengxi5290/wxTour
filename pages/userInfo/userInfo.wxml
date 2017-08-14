@@ -1,0 +1,53 @@
+<view class="info-container">
+	<view class="info-list">
+		<view class="img-line withborder" bindtap="uploadImg">
+			<view class="line-title">头像</view>
+			<view class="right-inner">
+				<view class="head-image" style="background-image: url({{dataList.avatar}});"></view>
+				<view class="info-arrow">></view>
+			</view>
+		</view>
+
+		<view class="each-info-line withborder" bindtap="toChangeName">
+			<view class="line-title">昵称</view>
+			<view class="right-inner">
+				<view class="info-inner">{{dataList.name}}</view>
+				<view class="info-arrow">></view>
+			</view>
+		</view>
+		<view class="each-info-line withborder" bindtap="toChange">
+			<view class="line-title">邮箱</view>
+			<view class="right-inner">
+				<view class="info-inner">{{dataList.email}}</view>
+				<view class="info-arrow">></view>
+			</view>
+		</view>
+		<view class="each-info-line withborder" bindtap="toChangeSex">
+			<view class="line-title">性别</view>
+			<view class="right-inner">
+				<view class="info-inner">
+					<!-- <text>{{dataList.gender}}</text> -->
+					<block wx:if="{{dataList.gender == 0}}">未知</block>
+					<block wx:if="{{dataList.gender == 1}}">男</block>
+					<block wx:if="{{dataList.gender == 2}}">女</block>
+				</view>
+				<view class="info-arrow">></view>
+			</view>
+		</view>
+		<view class="each-info-line">
+			<picker bindchange="bindPickerChange" value="{{dates}}" mode="date" start="1920-01-01" end="2017-12-31" bindchange="bindDateChanges">
+                <view class="picker">
+                    <view class="line-title">出生日期</view>
+					<view class="right-inner">
+						<view class="info-inner">{{dates}}</view>
+						<view class="info-arrow">></view>
+					</view>
+                </view>
+            </picker>
+		</view>
+	</view>
+
+	<view class="sSureBut">
+        <button class="surebut" bindtap="weInfo">同步微信资料</button>
+    </view>
+</view>

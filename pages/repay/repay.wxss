@@ -1,0 +1,110 @@
+.need-container {
+	background-color: #e6f0f0;
+	width: 100%;
+	height: 100vh;
+}
+.need-tips {
+	background-color: #fff;
+	font-size: 24rpx;
+	color: #9d9d9d;
+	padding-left: 24rpx;
+	padding-right: 24rpx;
+	line-height: 30rpx;
+	padding-top: 30rpx;
+	padding-bottom: 30rpx;
+	border-bottom: 1rpx solid #e9e9e9;
+}
+.textarea-block {
+	margin-top: 20rpx;
+	padding-left: 24rpx;
+	padding-right: 24rpx;
+	position: relative;
+}
+.place-holder {
+	color: #d0d0d0;
+}
+.text-zone {
+	color: #262626;
+	height: 430rpx;
+	font-size: 28rpx;
+	background-color: #fff;
+	border-radius: 10rpx;
+	width: 93.6%;
+	padding-left: 24rpx;
+	resize: none;
+	padding-right: 24rpx;
+	padding-top: 30rpx;
+	padding-bottom: 24rpx;
+}
+.attention {
+	position: absolute;
+	color: #d0d0d0;
+	font-size: 22rpx;
+	right: 48rpx;
+	bottom: 24rpx;
+}
+.button-group {
+	margin-top: 20rpx;
+	text-align: right;
+	padding-right: 24rpx;
+	padding-left: 24rpx;
+}
+.text-but {
+	display: inline-block;
+	color: #fff;
+	font-size: 30rpx;
+	width: 200rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+}
+.submit {
+	background-color: #49bcbd;
+}
+.cancel {
+	background-color: #d0d0d0;
+	margin-right: 20rpx;
+}
+
+/*退款原因*/
+.repay-reason-block {
+	padding-top: 35rpx;
+	padding-left: 24rpx;
+	padding-right: 24rpx;
+}
+.reason-title {
+	color: #262626;
+	font-size: 28rpx;
+}
+.redStar {
+	color: #d35352;
+	font-size: 28rpx;
+}
+.select-reason {
+	margin: 0 auto;
+	margin-top: 20rpx;
+	background-color: #fff;
+	border-radius: 10rpx;
+	width: 680rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	display: block;
+	padding-left: 14rpx;
+	padding-right: 14rpx;
+	color: #d0d0d0;
+	font-size: 28rpx;
+}
+.reason-text {
+	color: #d0d0d0;
+	font-size: 28rpx;
+}
+.reason-arrow {
+	color: #d0d0d0;
+	font-size: 28rpx;
+	float: right;
+}
+.neednt {
+	color: #d0d0d0;
+	font-size: 24rpx;
+	margin-left: 24rpx;
+}
+/*选择原因蒙版*/

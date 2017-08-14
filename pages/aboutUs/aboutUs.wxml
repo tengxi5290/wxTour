@@ -1,0 +1,68 @@
+<view class="about-container">
+	<view class="about-deco"></view>
+	<view class="about-title">关于颐乐旅游</view>
+	<view class="about-en">About Us</view>
+	<view class="about-detail">
+		<view>
+			“国有企业的负债率过高，对企业自身和整个实体经济都有危害。”有关专家指出，在利润率不够高的情况下，高负债率长期下去将掏空企业，甚至导致实体经济提早进入产业空心化时代。专家还认为，僵尸企业不产出却消耗资源，依靠信贷资金“输血”、“续命”，是国有企业负债率高的直接原因。
+		</view>
+		<view>
+			“国有企业的负债率过高，对企业自身和整个实体经济都有危害。”有关专家指出，在利润率不够高的情况下，高负债率长期下去将掏空企业，甚至导致实体经济提早进入产业空心化时代。专家还认为，僵尸企业不产出却消耗资源，依靠信贷资金“输血”、“续命”，是国有企业负债率高的直接原因。
+		</view>
+	</view>
+</view>
+
+
+<!-- <view class="calender">
+	<view class="monthTitle">
+		<div class="weui-flex">
+            <div class="weui-flex__item eachMonth" bindtap="one">
+            	{{ currentMonth }}
+            </div>
+            <div class="weui-flex__item eachMonth" bindtap="two">
+            	{{ currentMonth + 1 }}
+            </div>
+            <div class="weui-flex__item eachMonth" bindtap="three">
+            	{{ currentMonth + 2 }}
+            </div>
+            <div class="weui-flex__item eachMonth" bindtap="four">
+            	{{ currentMonth + 3 }}
+            </div>
+        </div>
+	</view>
+	<view class="weekTitle">
+		<div class="weui-flex">
+            <div class="weui-flex__item eachWeek">
+            	日
+            </div>
+            <div class="weui-flex__item eachWeek">
+            	一
+            </div>
+            <div class="weui-flex__item eachWeek">
+            	二
+            </div>
+            <div class="weui-flex__item eachWeek">
+            	三
+            </div>
+            <div class="weui-flex__item eachWeek">
+            	四
+            </div>
+            <div class="weui-flex__item eachWeek">
+            	五
+            </div>
+            <div class="weui-flex__item eachWeek">
+            	六
+            </div>
+        </div>
+	</view>
+	<view wx:for="{{ empty }}" wx:key="index" class="eachday empty">
+		<view>{{ item }}</view>
+	</view>
+	<view wx:for="{{ calender }}" wx:key="index" class="eachday" data-index="{{index}}">
+		<view class="depart" data-index="{{index}}" bindtap="highlight">
+			<view>{{ item.day }}</view>
+			<view>{{ item.price }}</view>
+		</view>
+		
+	</view>
+</view> -->

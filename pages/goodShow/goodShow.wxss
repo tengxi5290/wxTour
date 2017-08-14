@@ -1,0 +1,599 @@
+@import "../styles/fonts.wxss";
+/* pages/goodShow/goodShow.wxss */
+.weui-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.weui-flex__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+.current-page {
+  width: 100vw;
+}
+
+/*scroll-view {  
+  height: 800px;   
+} */
+
+.with-calender {
+  height: 760rpx;
+}
+
+.hide {
+  display: none;
+}
+
+#con {
+    height: 100vh;
+}
+
+.hidden {
+    overflow: hidden;
+}
+.auto {
+    overflow: auto;
+}
+
+/*顶部导航样式*/
+.top-nav-but-area {
+  /*background-color: olive;*/
+  line-height: 80rpx;
+  display: block;
+  background-color: #fff;
+  padding-left: 70rpx;
+  padding-right: 70rpx;
+}
+
+.top-nav-but-area text {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #262626;
+  width: 112rpx;
+}
+
+.mleftright {
+  margin-left: 136rpx;
+  margin-right: 136rpx;
+}
+
+.top-nav-but-area .active {
+  border-bottom: 4rpx solid #49bcbd;
+  color: #49bcbd;
+}
+
+.n-hover {
+  border-bottom: 4rpx solid #49bcbd;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 999;
+  border-bottom: 20rpx solid #e6f0f0;
+}
+.relative {
+  position: relative;
+}
+
+.vh-100 {
+    height: 100vh;
+}
+
+/*滚动banner图样式*/
+.roll-banner image {
+  width: 100vw;
+}
+
+.roll-banner swiper {
+  height: 450rpx;
+}
+
+/*商品标题样式*/
+.banner-title-inner {
+  padding-top: 34rpx;
+  padding-bottom: 40rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  background-color: white;
+}
+
+.priceBlock {
+  line-height: 50rpx;
+  /*background-color: darkgreen;*/
+}
+
+.block-left {
+  line-height: 50rpx;
+}
+
+.giftBlock {
+  line-height: 34rpx;
+  margin-top: 30rpx;
+}
+
+.mleft-40 {
+  margin-left: 30rpx;
+}
+
+.gift-lists {
+  color: #d0d0d0;
+  font-size: 24rpx;
+}
+
+.goodPrice {
+  color: #d35352;
+  font-size: 50rpx;
+}
+
+.soldOut {
+  float: right;
+  color: #d0d0d0;
+  font-size: 24rpx;
+}
+
+.goodUnit {
+  color: #d35352;
+  font-size: 24rpx;
+}
+
+.borderBottom {
+  border-bottom: 20rpx solid #e6f0f0;
+}
+
+.br {
+  display: block;
+}
+
+.main-title {
+  color: #262626;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+/*产品内容通用样式*/
+.inner-block {
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  padding-bottom: 40rpx;
+  background-color: white;
+}
+/*各个标题通用样式*/
+.column-deco {
+  width: 4rpx;
+  height: 31rpx;
+  display: inline-block;
+  background-color: #49bcbd;
+  vertical-align: middle;
+}
+.each-block-title {
+  padding-top: 29rpx;
+  padding-bottom: 29rpx;
+  /*line-height: 31rpx;*/
+  color: #262626;
+  font-size: 28rpx;
+}
+.column-title {
+  margin-left: 20rpx;
+}
+/*产品介绍*/
+.main-image {
+  width: 100%;
+  border-radius: 10rpx;
+}
+.main-text {
+  margin-top: 30rpx;
+  font-size: 26rpx;
+  color:  #686868;
+  line-height: 30rpx;
+}
+.each-sub-block {
+  margin-top: 62rpx;
+}
+.each-subtitle {
+  font-size: 28rpx;
+  color: #49bcbd;
+  text-align: center;
+  line-height: 30rpx;
+}
+.each-subtitle:after {
+  display: inline-block;
+  content: '';
+  width: 50rpx;
+  height: 2rpx;
+  vertical-align: middle;
+  margin-left: 22rpx;
+  background-color: #49bcbd;
+}
+.each-subtitle:before {
+  display: inline-block;
+  content: '';
+  width: 50rpx;
+  height: 2rpx;
+  vertical-align: middle;
+  margin-right: 22rpx;
+  background-color: #49bcbd;
+}
+.port-image-block {
+  margin-top: 32rpx;
+}
+.each-port-image {
+  height: 185rpx;
+  width: 95%;
+  border-radius: 10rpx;
+}
+/*.mright-9 {
+  margin-right: 9rpx;
+}
+.mleft-9 {
+  margin-left: 9rpx;
+}*/
+.port-block {
+  margin-top: 32rpx;
+}
+
+.tip-point {
+  width: 8rpx;
+  height: 8rpx;
+  background-color: #49bcbd;
+  vertical-align: middle;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.tip-title {
+  color: #262626;
+  font-size: 26rpx;
+}
+.port-intro {
+  margin-top: 22rpx;
+  font-size:26rpx;
+  color:#686868;
+  line-height: 30rpx;
+}
+.food-image-block {
+  margin-top: 62rpx;
+}
+.food-intro {
+  font-size:26rpx;
+  color:#686868;
+  line-height: 30rpx;
+  margin-top: 32rpx;
+}
+.food-image {
+  height: 300rpx;
+  width: 98%;
+  border-radius: 10rpx;
+  margin-top: 18rpx;
+}
+/*行程介绍*/
+.day-trip-block {
+  margin-top: 48rpx;
+}
+.day-num-circle {
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #49bcbd;
+  color: #fff;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+.day-trip-details {
+  margin-left: 30rpx;
+  width: 85%;
+  font-size:26rpx;
+  color:#686868;
+  display: inline-block;
+  line-height: 40rpx;
+}
+.image-in-trip {
+  height: 190rpx;
+  width: 95%;
+  /*overflow: hidden;*/
+  position: relative;
+  border-radius: 10rpx;
+}
+.mleft-62 {
+  margin-left: 62rpx;
+  margin-top: 14rpx;
+}
+.mask-in-image {
+  height: 38rpx;
+  line-height: 38rpx;
+  text-align: center;
+  color: white;
+  font-size: 22rpx;
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom-right-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+  background-color: rgba(0, 0, 0, .4);
+}
+.trip-image {
+  width: 300rpx;
+  height: 192rpx;
+  border-radius: 10rpx;
+  display: inline-block;
+}
+.inlineBlock {
+  display: inline-block;
+  margin-left: 18rpx;
+}
+/*费用说明*/
+.one-line-fee {
+  display: block;
+  color: #262626;
+  font-size: 26rpx;
+}
+.fee-hasnot {
+  margin-top: 40rpx;
+}
+.fee-has {
+  margin-top: 40rpx;
+}
+.fee-details {
+  margin-top: 20rpx;
+}
+.fee-intro-block {
+  padding-bottom: 100rpx;
+}
+/*购买按钮*/
+.buy-button {
+  background-color: #d35352;
+  height: 94rpx;
+  color: white;
+  border-radius: 0;
+  line-height: 94rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.slim-border {
+  border-bottom: 1px solid #e9e9e9;
+}
+
+/*蒙版样式*/
+.select-date-mask {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(40, 40, 40, 0.45);
+}
+
+.select-date {
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*padding-left: 24rpx;
+  padding-right: 24rpx;*/
+}
+.border-b {
+  border-bottom: 1px solid #e9e9e9;
+  border-top: 1px solid #e9e9e9;
+}
+.select-title {
+  line-height: 80rpx;
+  color: #262626;
+  font-size: 30rpx;
+  position: relative;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+}
+.shut-but {
+  width: 35rpx;
+  height: 35rpx;
+  display: inline-block;
+  border: 1rpx solid #9d9d9d;
+  color: #9d9d9d;
+  border-radius: 50%;
+  line-height: 30rpx;
+  position: absolute;
+  right: 48rpx;
+  top: 24rpx;
+  text-align: center;
+}
+.month-title {
+  line-height: 78rpx;
+  color: #262626;
+  font-size: 30rpx;
+  padding-left: 0rpx;
+  padding-right: 152rpx;
+}
+.text-center {
+  text-align: center;
+}
+.line-100 {
+  /*line-height: 100rpx;*/
+  height: 100rpx;
+}
+.week-title {
+  line-height: 62rpx;
+  background-color: #f7f7f7;
+  color: #262626;
+  font-size: 26rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+}
+.day-price {
+  font-size: 24rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+}
+.day {
+  font-size: 30rpx;
+}
+.red {
+  color: #d35352;
+}
+.black {
+  color: #686868;
+}
+.grey {
+  color: #d0d0d0;
+}
+.white {
+  color: #fff;
+}
+.traveller-num {
+  line-height: 80rpx;
+  color: #262626;
+  font-size: 26rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+}
+.traveller-title {
+  color: #262626;
+  font-size: 26rpx;
+  display: inline-block;
+  float: left;
+}
+.grownups {
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.childs {
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  overflow: hidden;
+  clear: both;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.next-button {
+  border-radius: 0;
+  background-color: #d35352;
+  color: white;
+  height: 94rpx;
+}
+.inday {
+  display: block;
+}
+.each-date {
+  margin-top: 38rpx;
+}
+.today-price {
+  margin-bottom: 10rpx;
+}
+/*计数器样式*/
+.addOrNot {
+  /*width: 168rpx;*/
+  height: 54rpx;
+  /*background-color: olive;*/
+  display: inline-block;
+  float: right;
+  margin-top: -5rpx;
+}
+.howMany {
+  height: 54rpx;
+  line-height: 54rpx;
+  text-align: center;
+  font-size: 28rpx;
+  display: inline-block;
+}
+.desc {
+  width: 52rpx;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+  border-left: 1rpx solid #e5e5e5;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+.count {
+  width: 58rpx;
+  border: 1rpx solid #e5e5e5;
+}
+.plus {
+  width: 52rpx;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+  border-right: 1rpx solid #e5e5e5;
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+
+.calender {
+  /*background-color: cyan;*/
+}
+.eachday {
+  display: inline-block;
+  /*background-color: pink;*/
+  width: 107.15rpx;
+  text-align: center;
+  height: 100rpx;
+  vertical-align: top;
+}
+.empty {
+  color: transparent;
+  vertical-align: top;
+}
+.monthTitle {
+  width: 100%;
+  /*background-color: olive;*/
+}
+.eachWeek {
+  text-align: center;
+}
+.eachMonth {
+  text-align: center;
+}
+.color {
+  background-color: white;
+}
+.highlight {
+  background-color: #49bcbd;
+}
+.normal, .noColor {
+  /*background-color: gold;*/
+}
+.cPrice {
+  color: #d35352;
+  font-size: 24rpx;
+}
+.cDay {
+  font-size: 30rpx;
+  color: #686868;
+  margin-top: 34rpx;
+}
+.weekTitle {
+  height: 62rpx;
+  line-height: 62rpx;
+  background-color: #f7f7f7;
+  color: #262626;
+  font-size: 26rpx;
+  border-top: 1rpx solid #e9e9e9;
+  border-bottom: 1rpx solid #e9e9e9;
+}
+.monthTitle {
+  height: 78rpx;
+  line-height: 78rpx;
+  font-size: 30rpx;
+  color: #262626;
+}
+.yes {
+  border-bottom: 4rpx solid #49bcbd;
+}
+.no {
+  border-bottom: 4rpx solid transparent;
+}
+.bingo {
+  background-color: red;
+}
+.depart {
+  /*height: 100rpx;*/
+}

@@ -1,0 +1,142 @@
+@import "../styles/fonts.wxss";
+.login-container {
+	width: 100vw;
+	height: 100vh;
+}
+image {
+	width: 100vw;
+	height: 100vh;
+}
+swiper {
+	height: 100vh;
+}
+.login-but {
+	position: absolute;
+	color: #fff;
+	background-color: black;
+	text-align: center;
+	height: 94rpx;
+	line-height: 94rpx;
+	width: 420rpx;
+	display: block;
+	left: 50%;
+	margin-left: -210rpx;
+	border-radius: 94rpx;
+	bottom: 310rpx;
+}
+.login-mask {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.5);
+}
+.in-login {
+	background-color: #fff;
+	border-radius: 8rpx;
+	width: 620rpx;
+	margin: 0 auto;
+	margin-top: 218rpx;
+	display: block;
+	padding-top: 50rpx;
+	padding-bottom: 30rpx;
+	padding-left: 40rpx;
+	padding-right: 40rpx;
+}
+.logo {
+	color: #262626;
+	font-size: 50rpx;
+	font-weight: bold;
+}
+.shut-icon {
+	float: right;
+	line-height: 50rpx;
+}
+.inp-block {
+	margin-top: 80rpx;
+}
+.inpline {
+	height: 120rpx;
+	color: #262626;
+	font-size: 36rpx; 
+	border-bottom: 1rpx solid #d0d0d0;
+}
+.inpline text {
+	display: inline-block;
+	vertical-align: super;
+}
+.real-inp {
+	display: inline-block;
+	margin-left: 30rpx;
+	margin-top: 32rpx;
+	width: 500rpx;
+}
+.i-icon {
+	vertical-align: baseline;
+	display: inline-block;
+}
+.re-fond {
+	height: 80rpx;
+	line-height: 80rpx;
+}
+.regist {
+	font-size: 30rpx;
+	color: #49bcbd;
+	float: left;
+}
+.forget {
+	float: right;
+	font-size: 30rpx;
+	background-color: transparent;
+	border: none;
+	color: #49bcbd;
+}
+.forget:after {
+	border: none;
+}
+.login-buts {
+	width: 100%;
+	height: 94rpx;
+	line-height: 94rpx;
+	text-align: center;
+	border-radius: 94rpx;
+	color: #fff;
+	font-size: 36rpx;
+	background-color: black;
+	display: block;
+	margin-top: 34rpx;
+}
+.hidden {
+	display: none;
+}
+.pstyle {
+	font-size: 30rpx;
+	color: #d0d0d0;
+}
+button[disabled][type="default"], wx-button[disabled]:not([type]) {
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+}
+button[disabled] {
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+}
+.attention {
+	width: 360rpx;
+	height: 120rpx;
+	border-radius: 20rpx;
+	background-color: rgba(0,0,0,.75);
+	font-size: 36rpx;
+	text-align: center;
+	color: #fff;
+	line-height: 120rpx;
+	position: absolute;
+	left: 50%;
+	margin-left: -180rpx;
+	top: 50%;
+	margin-top: -60rpx;
+	z-index: 9999;
+}

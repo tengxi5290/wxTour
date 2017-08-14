@@ -1,0 +1,40 @@
+<!--pages/selectTraveller/selectTraveller.wxml-->
+<view class="select-container">
+    <view class="select-tit-container">
+        <view class="select-title" bindtap="addNewTraveller">+ 新增出行人</view>
+    </view>
+    <view class="try-zone">
+        <movable-area class="moving" wx:for="{{dataList}}" data-index="{{index}}" wx:key="index">
+            <movable-view class="moved" direction="horizontal" x="{{xx}}">
+                <view class="each-select-line">
+                    <view class="check-container {{have=='no'?'hide':''}}" data-index="{{index}}">
+                        <switch type="checkbox" class="checkOrNot" checked="{{item.bingo}}"  bindchange="checking" data-index="{{index}}" />
+                    </view>
+                    <view class="each-msg-block">
+                        <view class="name-sex">
+                            <text class="ch-name">{{item.name}}</text>
+                            <text class="en-name"> {{item.first_name}} / {{item.last_name}} </text>
+                            <text class="sexy">{{item.gender}}</text>
+                        </view>
+                        <block wx:if="{{ whole == true }}">
+                            <view class="card-no">
+                                <text class="card-sort">{{item.card_type}}</text>
+                                <text class="card-number"> {{item.card_number}}</text>
+                            </view>
+                        </block>
+                        <block wx:elif="{{ whole == false }}">
+                            <view class="card-no" bindtap="fullfillMsg">
+                                <text class="fullfill">信息不全，点击补充</text>
+                            </view>
+                        </block>
+                    </view>
+                    <view class="edit-icon del" bindtap="deleteTraveller" data-index="{{index}}"><text class="iconfont icon-guanbi" style="color: #fff;"></text></view>
+                    <view class="edit-icon" bindtap="editTraveller" data-index="{{index}}"><text class="iconfont icon-xiugai" style="color: #ababab;"></text></view>
+                </view>
+            </movable-view>
+        </movable-area>
+    </view>
+    <view class="sSureBut">
+        <button class="surebut" bindtap="selected">确定</button>
+    </view>
+</view>

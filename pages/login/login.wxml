@@ -1,0 +1,44 @@
+<view class="login-container">
+	<div class="roll-container">
+		<swiper indicator-dots="{{indicatorDots}}"
+		autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+		<block wx:for="{{imgUrls}}" wx:key="index">
+			<swiper-item>
+			<image src="{{item}}" class="slide-image" width="100%" height="100%"/>
+			</swiper-item>
+		</block>
+	</swiper>
+	</div>
+
+	<view class="login-but" bindtap="goLogin">登录</view>
+
+	<view class="login-mask {{lMask?'hidden':'auto'}}">
+		<view class="in-login">
+			<view class="top">
+				<text class="logo">颐乐旅居</text>
+				<icon type="cancel" size="23" color="#9d9d9d" class="shut-icon" bindtap="shut"/>
+			</view>
+
+			<view class="inp-block">
+				<view class="inpline">
+					<text class="iconfont icon-shouji"></text>
+					<input type="number" placeholder="请输入手机号码" class="real-inp" bindchange="phoneNo" placeholder-class="pstyle" value="{{phone}}"/>
+				</view>
+				<view class="inpline">
+					<text class="iconfont icon-mima"></text>
+					<input type="text" placeholder="请输入密码" class="real-inp" password="true" placeholder-class="pstyle" bindchange="passwd" value="{{password}}" />
+				</view>
+			</view>
+
+			<view class="re-fond">
+				<text class="regist" bindtap="goRegist">立即注册</text>
+				<!-- <text class="forget" bindtap="forgetP">忘记密码</text> -->
+				<button class="forget" bindtap="forgetP" disabled="{{forbidden}}">忘记密码</button>
+			</view>
+
+			<button class="login-buts" bindtap="biu" disabled="{{go}}">登录</button>
+
+			<!-- <view class="attention {{attentionMask?'hidden':'auto'}}" id="test">{{wrong}}</view> -->
+		</view>
+	</view>
+</view>

@@ -1,0 +1,117 @@
+@import "../styles/fonts.wxss";
+/* pages/selectTraveller/selectTraveller.wxss */
+
+.select-container {
+    width: 100%;
+    /*height: 200vh;*/
+    background-color: #e6f0f0;
+}
+.select-tit-container {
+    padding-top: 20rpx;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+}
+.select-title {
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    color: #49bcbd;
+    font-size: 30rpx;
+    background-color: white;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+.each-select-line {
+    background-color: white;
+    /*margin-top: 20rpx;*/
+    height: 100rpx;
+    padding-left: 24rpx;
+    width: 830rpx;
+}
+.check-container {
+    display: inline-block;
+    vertical-align: top;
+    height: 100rpx;
+    width: 64rpx;
+    line-height: 100rpx;
+}
+.each-msg-block {
+    display: inline-block;
+    width: 550rpx;
+    height: 100rpx;
+}
+.name-sex {
+    display: block;
+}
+.card-no {
+    display: block;
+}
+.edit-icon {
+    width: 100rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    border-left: 1rpx solid #d0d0d0;
+    float: right;
+    display: inline-block;
+}
+.edit-icon text {
+    font-size: 60rpx;
+}
+.ch-name, .en-name {
+    font-size: 26rpx;
+    color: #262626;
+}
+.en-name {
+    width: 550rpx;
+}
+.sexy {
+    font-size: 22rpx;
+    color: #9d9d9d;
+}
+.card-sort, .card-number {
+    font-size: 26rpx;
+    color: #686868;
+}
+/*测试代码*/
+.try-zone {
+    width: 100%;
+    padding-bottom: 150rpx;
+}
+.moving {
+    width: 100%;
+    height: 100rpx;
+    margin-top: 20rpx;
+}
+.moved {
+    width: 114%;
+    height: 100rpx;
+}
+.fullfill {
+    color: #49bcbd;
+    font-size: 26rpx;
+}
+.del {
+    background-color: red;
+}
+.sSureBut {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+}
+.surebut {
+    width: 100%;
+    height: 100rpx;
+    background-color: #d35352;
+    color: #fff;
+    text-align: center;
+    border-radius: 0;
+    line-height: 100rpx;
+}
+.surebut:after {
+    border: none;
+}
+.hide {
+    display: none;
+}

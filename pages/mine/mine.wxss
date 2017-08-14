@@ -1,0 +1,152 @@
+@import "../styles/fonts.wxss";
+
+/*背景基本信息*/
+.mine-container {
+	width: 100%;
+	height: 100vh;
+	background-color: #e6f0f0;
+}
+.mine-bg {
+	width: 100%;
+	background-color: #49bcbd;
+	padding-top: 84rpx;
+	padding-bottom: 40rpx;
+}
+.mine-portrait {
+	width: 120rpx;
+	height: 120rpx;
+	border: 1rpx solid #fff;
+	border-radius: 50%;
+	margin: 0 auto;
+	background-image: url(https://bugentuan.yoroliving.com/images/wall1.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.mine-logo {
+	margin-top: 24rpx;
+	color: #fff;
+	font-size: 36rpx;
+	text-align: center;
+	font-weight: bold;
+}
+.mine-logo:before {
+	content: '';
+	display: inline-block;
+	margin-right: 30rpx;
+	width: 80rpx;
+	height: 2rpx;
+	background-color: #fff;
+	vertical-align: middle;
+}
+.mine-logo:after {
+	content: '';
+	display: inline-block;
+	margin-left: 30rpx;
+	width: 80rpx;
+	height: 2rpx;
+	background-color: #fff;
+	vertical-align: middle;
+}
+.mine-id {
+	margin-top: 14rpx;
+	color: #fff;
+	font-size: 24rpx;
+	text-align: center;
+}
+.mine-list {
+	background-color: #fff;
+	padding-top: 34rpx;
+	padding-bottom: 40rpx;
+}
+/*我的选项*/
+.each-list {
+	width: 25%;
+	display: inline-block;
+}
+.each-list-icon {
+	width: 60rpx;
+	height: 60rpx;
+	margin: 0 auto;
+	line-height: 60rpx;
+	text-align: center;
+	color: #686868;
+}
+.each-list-icon text {
+	font-size: 60rpx;
+}
+.each-list-title {
+	margin-top: 18rpx;
+	font-size: 30rpx;
+	color: #262626;
+	text-align: center;
+}
+/*我的优惠券*/
+.mine-coupon {
+	margin-top: 20rpx;
+	line-height: 100rpx;
+	background-color: #fff;
+	padding-left: 24rpx;
+	padding-right: 38rpx;
+}
+.mine-coupon-icon {
+	display: inline-block;
+	color: #686868;
+}
+.mine-coupon-text {
+	font-size: 30rpx;
+	color: #262626;
+	display: inline-block;
+	margin-left: 24rpx;
+}
+.coupon-arrow {
+	display: inline-block;
+	float: right;
+	color: #d0d0d0;
+}
+.mine-set {
+	margin-top: 20rpx;
+	background-color: #fff;
+	margin-bottom: 110rpx;
+}
+.border {
+	width: 702rpx;
+	margin: 0 auto;
+	height: 1rpx;
+	background-color: #e9e9e9;
+}
+
+.weui-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.weui-flex__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+.bottom-nav {
+	width: 100%;
+	/*height: 110rpx;*/
+	padding-top: 16rpx;
+	padding-bottom: 16rpx;
+	background-color: #262626;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	color: white;
+}
+.blocks {
+	display: block;
+	text-align: center;
+}
+.word-line {
+	font-size: 24rpx;
+}
+.cyan {
+	color: #49bcbd;
+}
+.white {
+	color: white;
+}

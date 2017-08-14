@@ -1,0 +1,207 @@
+<!--pages/fillMsg/fillMsg.wxml-->
+<view class="fill-container {{overflow?'hidden':'auto'}}" id="con">
+    <view class="goods-name-block depart-border">
+        <view class="goods-name under-border">
+            <text>{{names}}</text>
+        </view>
+        <view class="goods-details">
+            <text>{{year}}-{{month}}-{{days}}</text>
+            <text class="mleft-20">{{start_address}}出发</text>
+            <text class="mleft-20">{{format}}</text>
+        </view>
+    </view>
+
+    <view class="traveller-block depart-border">
+        <view class="part-title under-border">
+            <text class="part-word">出行人</text>
+            <button class="choose-traveller-but" bindtap="chooseTraveller">选择出行人</button>
+        </view>
+        <block wx:for="{{ inputsGroup }}" wx:key="index">
+            <view class="each-traveller under-border">
+                <text class="each-traveller-title">{{ item.title }}{{ index + 1 }}</text>
+                <input class="a-name" name="aName" id="aName" placeholder="请填写出行人信息" value="{{ item.num}}" bindchange="fillTravellerMsg" />
+                <text class="direct-arrow">></text>
+            </view>
+        </block>
+        <block wx:for="{{ inputsGroups }}" wx:key="index">
+            <view class="each-traveller under-border">
+                <text class="each-traveller-title">{{ item.title }}{{ index + 1 }}</text>
+                <input class="a-name" name="aName" id="aName" placeholder="请填写出行人信息" value="{{ item.num}}" bindchange="fillTravellerMsg" />
+                <text class="direct-arrow">></text>
+            </view>
+        </block>
+    </view>
+
+    <view class="host-block depart-border">
+        <view class="part-title under-border">
+            <text class="part-word">联系人</text>
+            <!-- <button class="choose-traveller-but">选择联系人</button> -->
+        </view>
+        <view class="each-inp under-border">
+            <text class="each-traveller-title">姓名</text>
+            <input class="a-name" name="cName" id="cName" placeholder="必填，用于供应商与您联系" bindchange="fillTourName" />
+            <!--<text class="direct-arrow">></text>-->
+        </view>
+
+        <view class="each-inp under-border">
+            <text class="each-traveller-title">手机</text>
+            <input class="a-name" name="cTel" id="cTel" type="number" placeholder="必填，用于接收订单确认信息" bindchange="fillTourPhone" />
+            <!--<text class="direct-arrow">></text>-->
+        </view>
+
+        <view class="each-inp under-border">
+            <text class="each-traveller-title noAfter">电子邮箱</text>
+            <input class="a-name" name="cMail" id="cMail" type="text" placeholder="请输入电子邮箱" bindchange="fillTourMail" />
+            <!--<text class="direct-arrow">></text>-->
+        </view>
+
+        <!-- <view class="each-inp under-border">
+            <text class="each-traveller-title">验证码</text>
+            <input class="a-name checkInp" name="cCheck" id="cCheck" type="text" placeholder="验证码" bindchange="fillTourNode" />
+            <button class="choose-traveller-but checkBut" bindtap="getCheckNode" disabled="{{enable}}">{{getNode}}</button>
+        </view> -->
+    </view>
+
+    <view class="insurance-block depart-border">
+        <view class="part-title under-border">
+            <text class="part-word">保险产品</text>
+        </view>
+        <view class="insurance-list">
+            <view class="each-list under-border" wx:for="{{ listData }}" wx:key="index" data-index="{{index}}">
+                <view class="i-name">
+                    <text class="text-block">{{ item.company }}</text>
+                    <text class="text-block">{{ item.name }}</text>
+                </view>
+                <view class="i-number">
+                    <text class="text-block i-price">￥{{ item.price }}/份×{{ count+childCount }}</text>
+                    <text class="text-block i-tips" bindtap="showTip" data-index="{{index}}">说明</text>
+                </view>
+                <view class="i-check">
+                    <!-- <checkbox value="{{cVal}}" checked="{{cCheck}}" color="#49bcbd" data-index="{{index}}" bindchange="checken"/> -->
+                    <switch checked="{{item.bingo}}" color="#49bcbd" data-index="{{index}}" bindchange="checken" type="checkbox"/>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="bargin-block depart-border">
+        <view class="part-title under-border">
+            <text class="part-word">使用优惠</text>
+            <switch type="switch" bindchange="barginOrNot" class="switch-but" checked="{{checkOrNot}}" color="#49bcbd"/>
+        </view>
+        <view wx:if="{{checkOrNot == false}}">
+            <view class="part-title part-title-no under-border">
+                <text class="part-word">我不使用优惠</text>
+            </view>
+        </view>
+        <view wx:else>
+            <block wx:if="{{ status == 'usable' }}">
+                <view class="part-title part-title-no under-border" bindtap="goCoupon">
+                    <text class="part-word">可优惠 ￥{{totalCoupon}}</text>
+                    <text class="direct-arrow special-arrow">></text>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="part-title part-title-no under-border" bindtap="goCoupon">
+                    <text class="part-word">没有可用优惠</text>
+                    <text class="direct-arrow special-arrow">></text>
+                </view>
+            </block>
+        </view>
+    </view>
+
+    <view class="special-need-block" bindtap="needs">
+        <view class="each-traveller under-border part-title-no">
+            <text class="each-traveller-title noAfter">特殊需求</text>
+            <text class="direct-arrow special-arrow">></text>
+        </view>
+    </view>
+
+    <view class="sure-block i-link">
+        <switch type="checkbox" bindchange="changeAgree" class="switch-but switch-check" checked="{{agreeOrNot}}" color="#49bcbd"/>
+        我接受《<navigator url="../protocol/protocol" class="i-i">保险经纪委托协议</navigator>》
+    </view>
+
+    <view class="go-immediate">
+        <text class="total-price">总价 ￥</text>
+        <text class="total-price-money">{{totalPrice}}</text>
+        <text class="fee-details" catchtap="showMask">费用明细</text>
+        <block wx:if="{{agreeOrNot == true}}">
+            <button class="book-immedia" bindtap="bought">立即预定</button>
+        </block>
+        <block wx:else>
+            <button class="book-immedia disable-but" disabled>立即预定</button>
+        </block>
+    </view>
+
+    <view class="fill-mask {{select?'hide':'hidden'}}">
+        <view class="fee-block">
+            <text class="fee-title">费用明细</text>
+            <view class="base-tour-fee">
+                <view class="top-line">
+                    <text class="left-col">基本团费</text>
+                    <text class="right-col">￥{{(price*count)+(childCount*childprice)}}</text>
+                </view>
+                <view class="traveller-type">
+                    <text class="left-col">成人</text>
+                    <text class="right-col">￥{{price}}/份×{{ count }}</text>
+                </view>
+                <block wx:if="{{ childCount > 0 }}">
+                    <view class="traveller-type">
+                        <text class="left-col">儿童</text>
+                        <text class="right-col">￥{{childprice}}/份×{{ childCount }}</text>
+                    </view>
+                </block>
+            </view>
+
+            <scroll-view class="insurance-type-block" scroll-y>
+                <view class="top-line">
+                    <text class="left-col">保险产品</text>
+                    <text class="right-col">￥{{insTotal*(childCount+count)}}</text>
+                </view>
+                <view class="each-insurance">
+                    <block wx:for="{{insuranceArray}}" wx:key="index">
+                        <block wx:if="{{item.price!=''}}">
+                            <view class="each-insurance-line">
+                                <text class="left-col">{{item.iCompany}}/{{item.iName}}</text>
+                                <text class="right-col">￥{{item.iprice}}/份×{{ count+childCount }}</text>
+                            </view>
+                        </block>
+                    </block>
+                </view>
+            </scroll-view>
+
+            <view class="bottom-summary">
+                <view class="total-prices">
+                    <text class="left-col">总额：</text>
+                    <text class="right-col">￥{{totalPrice}}</text>
+                </view>
+                <view class="shut-mask" catchtap="shutMask">
+                    <icon type="cancel" size="35" color="#d0d0d0"/>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="insurance-tips-mask {{chosen?'hide':'hidden'}}">
+        <view class="insurance-tips-block">
+            <view class="i-title-line">
+                <view class="left-title">{{ insData.name }}</view>
+                <view class="right-icon" catchtap="shutTip">
+                    <icon type="cancel" size="18" color="#262626"/>
+                </view>
+            </view>
+
+            <scroll-view class="inner-i" scroll-y>
+                <view class="i-title">承保公司</view>
+                <view class="i-block">{{ insData.company }}</view>
+
+                <view class="i-title">保险内容与保额</view>
+                <view class="i-block">{{ insData.content }} {{ insData.price }}</view>
+
+                <view class="i-title">投保须知</view>
+                <view class="i-block">{{ insData.tips }}</view>
+            </scroll-view>
+        </view>
+    </view>
+</view>

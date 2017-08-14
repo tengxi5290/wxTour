@@ -1,0 +1,70 @@
+<view class="addT-container">
+    <view class="add-name-block depart-border">
+        <view class="each-inp-line under-border">
+            <view class="each-line-title">中文姓名</view>
+            <input class="each-input ch-name" name="chName" id="chName" placeholder="必填，如张三" placeholder-class="placeH" value="{{fullName}}" bindchange="fullNameChange"/>
+        </view>
+
+        <view class="each-inp-line under-border">
+            <view class="each-line-title">姓(拼音)</view>
+            <input class="each-input last-name" name="lastName" id="lastName" placeholder="last name" placeholder-class="placeH" value="{{lastName}}" bindchange="lastChange" />
+        </view>
+
+        <view class="each-inp-line under-border">
+            <view class="each-line-title">名(拼音)</view>
+            <input class="each-input first-name" name="firstName" id="firstName" placeholder="first name" placeholder-class="placeH" value="{{firstName}}" bindchange="firstChange" />
+        </view>
+    </view>
+
+    <view class="card-type-block depart-border">
+        <view class="each-inp-line under-border">
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker">
+                    <view class="each-line-title">证件类型</view>
+                    <text class="picker-word">{{array[index]}}</text>
+                    <text class="reason-arrow">></text>
+                </view>
+            </picker>
+        </view>
+
+        <view class="each-inp-line under-border">
+            <view class="each-line-title">证件号码</view>
+            <input class="each-input card-no" name="cardNo" id="cardNo" placeholder="必填" placeholder-class="placeH" value="{{cardno}}" bindchange="cardChange" />
+        </view>
+
+        <view class="each-inp-line under-border">
+            <picker bindchange="bindPickerChange" value="{{date}}" mode="date" start="1920-01-01" end="2017-12-31" bindchange="bindDateChange">
+                <view class="picker">
+                    <view class="each-line-title">有效期至</view>
+                    <text class="picker-word">{{date}}</text>
+                    <text class="reason-arrow">></text>
+                </view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="sex-birth-block">
+        <view class="each-inp-line under-border">
+            <view class="each-line-title">性别性别</view>
+            <view class="sex-wrapper">
+                <radio-group class="radio-group radio-sex" bindchange="radioChange">
+                    <label class="radio" wx:for="{{items}}" wx:key="index">
+                        <radio value="{{item.name}}" checked="{{item.checked}}" color="#49bcbd"/>{{item.value}}
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+
+        <view class="each-inp-line under-border">
+            <picker bindchange="bindPickerChange" value="{{dates}}" mode="date" start="1920-01-01" end="2017-12-31" bindchange="bindDateChanges">
+                <view class="picker">
+                    <view class="each-line-title">出生日期</view>
+                    <text class="picker-word">{{dates}}</text>
+                    <text class="reason-arrow">></text>
+                </view>
+            </picker>
+        </view>
+    </view>
+
+    <button class="save" bindtap="save">立即保存</button>
+</view>

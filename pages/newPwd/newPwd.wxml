@@ -1,0 +1,35 @@
+<view class="newpwd-container">
+	<view class="warn-words {{ warn? 'warns' : 'ok' }}">{{warnings}}</view>
+	<view class="pwd-block">
+		<view class="each-pwd">
+			<view class="each-pwd-title">当前密码</view>
+			<view class="each-pwd-inp">
+				<input type="text" placeholder="8-16位字符" placeholder-class="pc" bindblur="currentPwd" class="pwd-inp" password="{{password}}" />
+			</view>
+		</view>
+
+		<view class="each-pwd withborder">
+			<view class="each-pwd-title">新密码</view>
+			<view class="each-pwd-inp">
+				<input type="text" placeholder="8-16位字符" placeholder-class="pc" bindblur="newPwd" class="pwd-inp" password="{{password}}" />
+			</view>
+		</view>
+
+		<view class="each-pwd">
+			<view class="each-pwd-title">确定密码</view>
+			<view class="each-pwd-inp">
+				<input type="text" placeholder="8-16位字符" placeholder-class="pc" bindblur="surePwd" class="pwd-inp" password="{{password}}" />
+			</view>
+		</view>
+	</view>
+
+	<view class="showPwd" bindtap="screat">
+		<icon type="success" size="17" color="#49bcbd"/>
+		<text class="show-pwd">显示密码</text>
+	</view>
+
+	<view class="button-block">
+		<button class="sure" bindtap="sureBut">确定</button>
+	</view>
+
+</view>

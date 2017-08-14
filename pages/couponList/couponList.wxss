@@ -1,0 +1,125 @@
+.couponList-container {
+	width: 100%;
+	height: 100vh;
+	background-color: #e6f0f0;
+}
+.weui-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.weui-flex__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+/*导航样式*/
+.navigator {
+	height: 80rpx;
+	line-height: 80rpx;
+	background-color: #fff;
+	color: #262626;
+	font-size: 28rpx;
+	text-align: center;
+}
+.each-nav {
+	display: inline-block;
+}
+.fixed {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	left: 0;
+	z-index: 99;
+	border-bottom: 20rpx solid #e6f0f0;
+}
+.relative {
+	position: relative;
+}
+.yes {
+	border-bottom: 4rpx solid #49bcbd;
+}
+.no {
+	border-bottom: 4rpx solid transparent;
+}
+/*优惠券部分*/
+.coupon-list-block {
+	padding-left: 24rpx;
+	padding-right: 24rpx;
+}
+.each-coupon {
+	height: 250rpx;
+	border-radius: 20rpx;
+	background-color: #fff;
+	overflow: hidden;
+	position: relative;
+	margin-top: 20rpx;
+}
+.left-pic {
+	width: 432rpx;
+	height: 250rpx;
+	background-image: url(https://bugentuan.yoroliving.com/images/wall3.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: inline-block;
+	vertical-align: top;
+}
+.pic-mask {
+	width: 432rpx;
+	height: 250rpx;
+	background-color: rgba(0,0,0,.3);
+	padding-top: 84rpx;
+}
+.coupon-state {
+	color: #fff;
+	font-size: 40rpx;
+	margin-left: 24rpx;
+}
+.use-range {
+	margin-top: 10rpx;
+	color: rgba(255,255,255,.85);
+	font-size: 28rpx;
+	margin-left: 24rpx;
+}
+.use-date {
+	margin-top: 44rpx;
+	color: rgba(255,255,255,.6);
+	font-size: 22rpx;
+	margin-left: 24rpx;
+}
+.right-price {
+	width: 270rpx;
+	display: inline-block;
+}
+.coupon-price {
+	font-size: 72rpx;
+	color: #49bcbd;
+	text-align: center;
+	margin-top: 80rpx;
+}
+.coupon-but {
+	margin-top: 18rpx;
+	border-radius: 10rpx;
+	background-color: #fff;
+	width: 146rpx;
+	height: 46rpx;
+	color: #686868;
+	font-size: 24rpx;
+	padding: 0rpx;
+	line-height: 46rpx;
+}
+.deco-circle {
+	width: 22rpx;
+	height: 22rpx;
+	position: absolute;
+	background-color: #e6f0f0;
+	left: 421rpx;
+	border-radius: 50%;
+}
+.top {
+	top: -11rpx;
+}
+.bottom {
+	bottom: -11rpx;
+}

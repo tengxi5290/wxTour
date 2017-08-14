@@ -1,0 +1,43 @@
+<view class="couponList-container">
+	<view class="navigator {{fix?'fixed':'relative'}}">
+		<div class="weui-flex">
+            <div class="weui-flex__item">
+            	<text class="each-nav {{status == 'usable' ?'yes':'no'}}" bindtap="underUse">未使用</text>
+            </div>
+            <div class="weui-flex__item">
+            	<text class="each-nav {{status == 'used' ?'yes':'no'}}" bindtap="used">已使用</text>
+            </div>
+            <div class="weui-flex__item">
+            	<text class="each-nav {{status == 'destroyed' ?'yes':'no'}}" bindtap="useless">已失效</text>
+            </div>
+        </div>
+	</view>
+
+	<view class="coupon-list-block">
+		<block wx:for="{{dataList}}" wx:key="index" data-list="{{index}}">
+			<view class="each-coupon" bindtap="toList">
+				<view class="left-pic" style="background-image: url(https://bugentuan.yoroliving.com/images/wall4.jpg);">
+					<view class="pic-mask">
+						<view class="coupon-state">{{item.type}}</view>
+						<view class="use-range">{{item.tips}}</view>
+						<view class="use-date">有效期 {{item.begining}}至{{item.deadline}}</view>
+					</view>
+				</view>
+				<view class="right-price">
+					<view class="coupon-price">￥{{item.price}}</view>
+					<block wx:if="{{ item.status == 'usable' }}">
+						<button class="coupon-but">立即使用</button>
+					</block>
+					<block wx:elif="{{ item.status == 'used' }}">
+						<button class="coupon-but" disabled="true">已使用</button>
+					</block>
+					<block wx:elif="{{ item.status == 'destroyed' }}">
+						<button class="coupon-but" disabled="true">已过期</button>
+					</block>
+				</view>
+				<view class="deco-circle top"></view>
+				<view class="deco-circle bottom"></view>
+			</view>
+		</block>
+	</view>
+</view>

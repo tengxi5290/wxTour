@@ -1,0 +1,35 @@
+<view class="set-container">
+	<view class="changeMsg" bindtap="changeSelf">
+		<view class="head-image" style="background-image: url({{dataList.avatar}});"></view>
+		<view class="user-name">{{dataList.name}}</view>
+		<view class="direct">
+			<text class="change-text">修改个人资料</text>
+			<text class="arrow">></text>
+		</view>
+	</view>
+
+	<view class="change-sets">
+		<view class="change-line" bindtap="changePwd">
+			<text class="change-sets-title">修改登录密码</text>
+			<text class="change-sets-arrow">></text>
+		</view>
+
+		<view class="change-line withborder" bindtap="travellerMsg">
+			<text class="change-sets-title">常用旅客信息</text>
+			<text class="change-sets-arrow">></text>
+		</view>
+
+		<view class="change-line" bindtap="clear">
+			<text class="change-sets-title cyan">清除缓存（{{storage}}M）</text>
+		</view>
+	</view>
+
+	<view class="change-sets">
+		<view class="change-line" bindtap="toAboutUs">
+			<text class="change-sets-title">关于我们</text>
+			<text class="change-sets-arrow">></text>
+		</view>
+	</view>
+
+	<view class="logout" bindtap="logout">退出登录</view>
+</view>

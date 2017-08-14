@@ -1,0 +1,10 @@
+<view class="edit-container">
+	<view class="inp-line">
+		<input class="inp" value="{{iValue}}" bindinput="ready" />
+		<view class="clear-inp" bindtap="clears"><icon type="clear" size="20" color="#a0a1a7"/></view>
+	</view>
+	<view class="attention">为保护您的隐私，请避免用手机号等敏感信息当昵称</view>
+	<view class="save-container">
+		<button class="save" bindtap="save">保存</button>
+	</view>
+</view>

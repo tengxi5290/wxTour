@@ -1,0 +1,30 @@
+<view class="need-container">
+	<view class="repay-reason-block">
+		<view class="reason-title">退款原因<text class="redStar">*</text></view>
+	</view>
+	<view class="select-reason" bindtap="reason">
+		<!-- <text class="reason-text">请选择退款原因</text> -->
+		<!-- <text class="reason-arrow">></text> -->
+		<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+			<view class="picker">
+				{{array[index]}}
+				<text class="reason-arrow">></text>
+			</view>
+
+		</picker>
+	</view>
+	<view class="repay-reason-block">
+		<view class="reason-title">退款说明<text class="neednt">(可不填)</text></view>
+	</view>
+	<form name="need-form" action="#" method="get">
+		<view class="textarea-block">
+			<textarea bindblur="getLength" placeholder="输入退款说明" placeholder-class="place-holder" class="text-zone" maxlength="{{length}}" />
+			<text class="attention">{{cLength}}/{{tLength}}字</text>
+		</view>
+
+		<view class="button-group">
+			<button class="text-but cancel" form-type="reset">取消</button>
+			<button class="text-but submit" form-type="submit">提交</button>
+		</view>
+	</form>
+</view>

@@ -1,0 +1,479 @@
+/* pages/underpay/underpay.wxss */
+@import "../styles/fonts.wxss";
+.unpay-container {
+	width: 100%;
+}
+.weui-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.weui-flex__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+/*顶部背景*/
+.bg {
+	height: 280rpx;
+	width: 100%;
+	background-color: olive;
+	background-image: url(https://bugentuan.yoroliving.com/images/5.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.payState-top {
+	font-size: 36rpx;
+	color: #fff;
+	line-height: 40rpx;
+	margin-left: 10rpx;
+}
+.bg-text {
+	padding-top: 100rpx;
+	margin-left: 44rpx;
+}
+.waiting-icon {
+	vertical-align: top;
+}
+.leftTime {
+	color: #fff;
+	font-size: 24rpx;
+	margin-left: 94rpx;
+}
+/*订单状态*/
+.payState {
+	background-color: white;
+	padding-left: 24rpx;
+	padding-right: 24rpx;
+	border-bottom: 20rpx solid #e6f0f0;
+}
+.pay-point-block {
+	padding-top: 40rpx;
+	padding-bottom: 40rpx;
+	border-bottom: 1rpx solid #d0d0d0;
+}
+.state-tip {
+	margin-top: 10rpx;
+}
+.point {
+	width: 16rpx;
+	height: 16rpx;
+	display: inline-block;
+	background-color: #d0d0d0;
+	vertical-align: bottom;
+	border-radius: 50%;
+}
+.line {
+	display: inline-block;
+	margin-left: 10rpx;
+	margin-right: 10rpx;
+	height: 3rpx;
+	width: 298rpx;
+	background-color: #d0d0d0;
+}
+.ready {
+	background-color: #49bcbd;
+}
+.tip-word {
+	color: #d0d0d0;
+	display: inline-block;
+	font-size: 26rpx;
+	width: 100%;
+}
+.already {
+	color: #49bcbd;
+}
+.word-left {
+	text-align: left;
+}
+.word-center {
+	text-align: center;
+}
+.word-right {
+	text-align: right;
+}
+.order-price-detail {
+	height: 100rpx;
+	line-height: 100rpx;
+}
+.fee-details {
+	font-size: 24rpx;
+	color: #686868;
+}
+.direct-arrow {
+	font-size: 24rpx;
+	color: #686868;
+	margin-left: 10rpx;
+}
+.t-right {
+	text-align: right;
+}
+.order-total {
+	color: #262626;
+	font-size: 30rpx;
+}
+.total-price {
+	color: #d35352;
+	font-size: 30rpx;
+	margin-left: 26rpx;
+}
+/*订单参数信息*/
+.order-json {
+	padding-left: 24rpx;
+	padding-right: 24rpx;
+	background-color: #fff;
+	border-bottom: 20rpx solid #e6f0f0;
+}
+.just-container {
+	border-bottom: 1rpx solid #d0d0d0;
+}
+.order-good-title {
+	font-size: 28rpx;
+	color: #49bcbd;
+	line-height: 46rpx;
+	display: inline-block;
+	width: 88%;
+	padding-top: 30rpx;
+	padding-bottom: 30rpx;
+	vertical-align: middle;
+}
+.order-good-title-arrow {
+	display: inline-block;
+	margin-left: 40rpx;
+}
+.another-container {
+	padding-top: 26rpx;
+	padding-bottom: 26rpx;
+	color: #262626;
+	font-size: 28rpx;
+}
+.line-two {
+	margin-top: 26rpx;
+}
+.port-time {
+	width: 210rpx;
+	display: inline-block;
+}
+.tour-num {
+	width: 210rpx;
+	display: inline-block;
+}
+.child-num {
+	margin-left: 50rpx;
+}
+.leave-port {
+	margin-left: 50rpx;
+}
+/*联系人信息*/
+.contact-people {
+	border-bottom: 20rpx solid #e6f0f0;
+	padding-left: 24rpx;
+	padding-right: 24rpx;
+	background-color: #fff;
+}
+.basic-block-title {
+	line-height: 100rpx;
+	font-size: 30rpx;
+	color: #262626;
+	border-bottom: 1rpx solid #d0d0d0;
+}
+.basic-contact-details {
+	padding-top: 26rpx;
+	padding-bottom: 26rpx;
+	border-bottom: 1rpx solid #d0d0d0;
+}
+.each-basic-line {
+	line-height: 46rpx;
+}
+.basic-title {
+	color: #9d9d9d;
+	font-size: 26rpx;
+	width: 116rpx;
+	display: inline-block;
+	text-align: left;
+}
+.basic-inner {
+	color: #262626;
+	font-size: 28rpx;
+	margin-left: 36rpx;
+}
+.plane-msg {
+	background-color: #fff;
+	padding-left: 24rpx;
+	padding-right: 24rpx;
+	border-bottom: 20rpx solid #e6f0f0;
+}
+.plane-summary {
+	padding-top: 26rpx;
+	padding-bottom: 26rpx;
+	color: #262626;
+	font-size: 26rpx;
+}
+.leave-airport {
+	margin-left: 50rpx;
+}
+.plane-plan {
+	position: relative;
+	padding-bottom: 20rpx;
+}
+.basic-time {
+	color: #262626;
+	font-size: 28rpx;
+	display: inline-block;
+	vertical-align: top;
+}
+.basci-circle {
+	width: 10rpx;
+	height: 10rpx;
+	display: inline-block;
+	border-radius: 50%;
+	margin-left: 16rpx;
+	vertical-align: top;
+	margin-top: 14rpx;
+	background-color: #49bcbd;
+}
+.plane-has {
+	margin-left: 40rpx;
+	display: inline-block;
+}
+.which-airport {
+	color: #262626;
+	font-size: 28rpx;
+}
+.hello-kitty {
+	margin-top: 16rpx;
+	color: #9d9d9d;
+	font-size: 24rpx;
+}
+.arrival-line {
+	display: block;
+	margin-top: 98rpx;
+	position: relative;
+}
+.get-off-date {
+	color: #9d9d9d;
+	font-size: 24rpx;
+	display: inline-block;
+	position: absolute;
+	top: -40rpx;
+}
+.vlan {
+	position: absolute;
+	content: '';
+	display: block;
+	width: 2rpx;
+	height: 166rpx;
+	background-color: #e9e9e9;
+	top: 25rpx;
+	left: 90rpx;
+}
+.button-block {
+	background-color: #e6f0f0;
+	padding-top: 20rpx;
+	padding-bottom: 20rpx;
+	padding-left: 24rpx;
+	padding-right: 24rpx;
+}
+.half-but {
+	width: 340rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	color: #9d9d9d;
+	font-size: 28rpx;
+	background-color: white;
+	border-radius: 10rpx;
+	display: inline-block;
+}
+.mmright {
+	margin-left: 18rpx;
+}
+.full-but {
+	width: 100%;
+	height: 100rpx;
+	line-height: 100rpx;
+	color: #fff;
+	border-radius: 0;
+	background-color: #d35352;
+}
+.noPlane {
+	height: 80rpx;
+	line-height: 80rpx;
+	font-size: 28rpx;
+	color: #262626;
+}
+/*费用说明蒙版内容*/
+.fill-mask {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.75);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.hide {
+    display: none;
+}
+
+#con {
+    height: 90vh;
+}
+
+.fee-block {
+    color: #fff;
+    padding-top: 40rpx;
+    padding-left: 34rpx;
+    padding-right: 34rpx;
+}
+.fee-title {
+    font-size: 36rpx;
+}
+.base-tour-fee {
+    margin-top: 40rpx;
+}
+.top-line {
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 30rpx;
+    border-bottom: 1rpx solid #e9e9e9;
+}
+.left-col {
+    float: left;
+}
+.right-col {
+    float: right;
+}
+.traveller-type {
+    margin-top: 20rpx;
+    color: #e9e9e9;
+    font-size: 26rpx;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.insurance-type-block {
+    margin-top: 40rpx;
+    height: 600rpx;
+}
+.each-insurance {
+    margin-top: 20rpx;
+}
+.each-insurance-line {
+    font-size: 26rpx;
+    margin-top: 12rpx;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.each-insurance-line:first {
+    margin-top: 0;
+}
+.bottom-summary {
+    width: 90%;
+    height: 216rpx;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 34rpx;
+    padding-right: 34rpx;
+}
+.total-prices {
+    line-height: 80rpx;
+    height: 80rpx;
+    font-size: 36rpx;
+    color: #ff5857;
+}
+.shut-mask {
+    width: 70rpx;
+    height: 70rpx;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50rpx;
+}
+.hidden {
+    overflow: hidden;
+}
+
+/*取消订单警示蒙版*/
+.warn-mask {
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+	top: 0;
+	left: 0;
+	position: fixed;
+	overflow: hidden;
+}
+.in-warn {
+	width: 560rpx;
+	height: 242rpx;
+	overflow: hidden;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 430rpx;
+	border-radius: 8rpx;
+}
+.warn-words {
+	padding-top: 50rpx;
+	padding-bottom: 52rpx;
+	text-align: center;
+	color: #262626;
+	font-size: 36rpx;
+	font-weight: bold;
+	border-bottom: 1rpx solid #e9e9e9;
+}
+.bb-but {
+	font-size: 36rpx;
+	color: #9d9d9d;
+	width: 278rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	background-color: #fff;
+	display: inline-block;
+	border: none;
+	border-radius: 0;
+}
+.bb-but:after {
+	border: none;
+}
+.depart-line {
+	display: inline-block;
+	width: 2rpx;
+	height: 100rpx;
+	background-color: #e9e9e9;
+}
+.color {
+	color: #49bcbd;
+}
+
+/*电话蒙版*/
+.in-tel {
+	width: 560rpx;
+	height: 290rpx;
+	/*overflow: hidden;*/
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 430rpx;
+	border-radius: 8rpx;
+}
+.ourTel {
+	padding-top: 50rpx;
+	text-align: center;
+	color: #262626;
+	font-size: 36rpx;
+	font-weight: bold;
+}
+.our-tel {
+	margin-top: 15rpx;
+	text-align: center;
+	color: #262626;
+	font-size: 28rpx;
+	padding-bottom: 46rpx;
+	border-bottom: 1rpx solid #e9e9e9;
+}
+.iconfont {
+	color: white;
+	font-size: 30rpx;
+}

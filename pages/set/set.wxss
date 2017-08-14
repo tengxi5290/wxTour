@@ -1,0 +1,75 @@
+.set-container {
+	width: 100%;
+	height: 100vh;
+	background-color: #e6f0f0;
+}
+.changeMsg {
+	background-color: #fff;
+	height: 140rpx;
+	line-height: 140rpx;
+	padding-left: 24rpx;
+	padding-right: 38rpx;
+}
+.head-image {
+	width: 80rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	display: inline-block;
+	border-radius: 50%;
+	background-image: url(https://bugentuan.yoroliving.com/images/wall2.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+.user-name {
+	font-size: 30rpx;
+	color: #262626;
+	margin-left: 16rpx;
+	display: inline-block;
+}
+.direct {
+	float: right;
+}
+.change-text {
+	font-size: 24rpx;
+	color: #686868;
+	margin-right: 16rpx;
+	vertical-align: middle;
+}
+.arrow {
+	font-size: 24rpx;
+}
+
+.change-sets {
+	margin-top: 20rpx;
+	background-color: #fff;
+	padding-left: 24rpx;
+	padding-right: 24rpx;
+}
+.change-line {
+	line-height: 100rpx;
+}
+.change-sets-title {
+	font-size: 30rpx;
+	color: #262626;
+}
+.change-sets-arrow {
+	color: #d0d0d0;
+	float: right;
+}
+.withborder {
+	border-top: 1rpx solid #e9e9e9;
+	border-bottom: 1rpx solid #e9e9e9;
+}
+.cyan {
+	color: #13bcd5;
+}
+.logout {
+	background-color: #fff;
+	font-size: 36rpx;
+	color: #262626;
+	text-align: center;
+	line-height: 100rpx;
+	margin-top: 80rpx;
+}

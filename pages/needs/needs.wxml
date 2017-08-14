@@ -1,0 +1,14 @@
+<view class="need-container">
+	<view class="need-tips">您的特殊需求，我们会尽量协调。如无法满足，我们不会另行通知，请您见谅。</view>
+	<form name="need-form" action="#" method="get">
+		<view class="textarea-block">
+			<textarea bindinput="getLength" placeholder="输入特殊需求" placeholder-class="place-holder" class="text-zone" maxlength="{{length}}" disabled="{{disable}}" value="{{text}}" />
+			<text class="attention">{{cLength}}/{{tLength}}字</text>
+		</view>
+
+		<view class="button-group">
+			<button class="text-but cancel" form-type="reset">取消</button>
+			<button class="text-but submit" form-type="submit" bindtap="submitting">提交</button>
+		</view>
+	</form>
+</view>

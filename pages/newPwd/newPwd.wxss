@@ -1,0 +1,76 @@
+.newpwd-container {
+	width: 100%;
+	height: 100vh;
+	background-color: #e6f0f0;
+}
+.pwd-block {
+	background-color: #fff;
+	padding-left: 24rpx;
+	padding-right: 24rpx;
+}
+.each-pwd {
+	height: 100rpx;
+	line-height: 100rpx;
+	font-size: 30rpx;
+}
+.each-pwd-title {
+	color: #262626;
+	display: inline-block;
+	width: 130rpx;
+}
+.each-pwd-inp {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -12rpx;
+	margin-left: 50rpx;
+	color: #262626;
+}
+.pc {
+	color: #d0d0d0;
+}
+.withborder {
+	border-top: 1rpx solid #e9e9e9;
+	border-bottom: 1rpx solid #e9e9e9;
+}
+.showPwd {
+	float: right;
+	margin-top: 33rpx;
+	padding-right: 24rpx;
+}
+.button-block {
+	clear: both;
+	overflow: hidden;
+	padding-top: 33rpx;
+	padding-left: 24rpx;
+	padding-right: 24rpx;
+}
+.show-pwd {
+	color: #9d9d9d;
+	font-size: 24rpx;
+	margin-left: 10rpx;
+	vertical-align: text-top;
+}
+.sure {
+	height: 70rpx;
+	line-height: 70rpx;
+	color: #fff;
+	font-size: 30rpx;
+	background-color: #49bcbd;
+}
+.warn-words {
+	height: 70rpx;
+	font-size: 30rpx;
+	color: #fff;
+	text-align: center;
+	line-height: 70rpx;
+	background-color: red;
+}
+.warns {
+	display: none;
+}
+.ok {
+	display: block;
+}
+input {
+	width: 500rpx;
+}

@@ -1,0 +1,203 @@
+<!--pages/goodShow/goodShow.wxml-->
+<view class="{{overflow?'hidden':'auto'}}" id="con">
+  <scroll-view scroll-y bindscroll="mainScroll" class="vh-100" scroll-into-view="{{runTo}}">
+  <div class="roll-banner">
+    <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{dataList.pictures}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item.url}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+  </div>
+
+  <div class="banner-title">
+    <view class="banner-title-inner borderBottom">
+      <div class="br">
+        <text class="main-title" catchtap="toButton">{{dataList.name}}</text>
+      </div>
+      <div class="br priceBlock">
+        <div class="block-left"><text class="goodPrice">￥{{price}}</text><text class="goodUnit">起/人</text></div>
+        <text class="soldOut">已售出{{count}}件</text>
+      </div>
+      <div class="br giftBlock">
+        <div class="" wx:for="{{dataList.good_labels}}" wx:key="index">
+          <text class=""><text class="iconfont icon-duigou" style="color: #49bcbd;"></text></text><text class="gift-lists">{{item.name}}</text>
+        </div>
+      </div>
+    </view>
+  </div>
+
+  <div class="top-nav">
+    <view class="top-nav-but-area borderBottom {{fix?'fixed':'relative'}}">
+      <text hover-class="n-hover" class="{{locate == 'cpjs'? 'active':''}}" bindtap="toGoods">产品介绍</text>
+      <text hover-class="n-hover" class="mleftright {{locate == 'xcjs'? 'active':''}}" bindtap="toTrip">行程介绍</text>
+      <text hover-class="n-hover" bindtap="toFee" class="{{locate == 'fysm'? 'active':''}}">费用说明</text>
+    </view>
+  </div>
+<!--产品介绍块-->
+  <div class="chanpinxinxi">
+    <view class="goods-intro-block inner-block borderBottom" id="goods">
+      <view class="each-block-title" id="chanpinjieshao">
+        <view class="column-deco"></view>
+        <text class="column-title">产品介绍</text>
+      </view>
+
+      <view class="something" wx:for="{{dataList.good_introduces}}" wx:key="index">
+        <div class="weui-flex">
+            <div class="weui-flex__item">
+              <image src="{{item.url}}" class="main-image" mode="widthFix"></image>
+            </div>
+        </div>
+      </view>
+    </view>
+  <!--行程介绍块-->
+    <view class="tour-intro-block inner-block borderBottom" id="trip">
+      <view class="each-block-title slim-border" id="xingchengjieshao">
+        <view class="column-deco"></view>
+        <text class="column-title">行程介绍</text>
+      </view>
+
+      <block wx:for="{{dataList.good_trips}}" wx:key="index">
+        <view class="day-trip-block">
+          <view class="day-num-circle">0{{index+1}}</view>
+          <text class="day-trip-details">{{item.desc}}</text>
+        </view>
+
+        <view class="mleft-62">
+          <view wx:for="{{item.pictures}}" class="inlineBlock" wx:key="index">
+            <image src="{{item.url}}" class="trip-image"></image>
+          </view>
+        </view>
+
+      </block>
+    </view>
+  <!--费用说明块-->
+    <view class="fee-intro-block inner-block borderBottom" id="fee">
+      <view class="each-block-title slim-border" id="feiyongshuoming">
+        <view class="column-deco"></view>
+        <text class="column-title">费用说明</text>
+      </view>
+
+      <view class="fee-has">
+        <view class="port-title">
+          <view class="tip-point"></view>
+          <text class="tip-title">费用包含</text>
+        </view>
+        <view class="fee-details">
+          <text class="one-line-fee" wx:for="{{dataList.good_costs}}" wx:key="index">{{index+1}}.{{item.content}}</text>
+        </view>
+      </view>
+      <view class="fee-hasnot">
+        <view class="port-title">
+          <view class="tip-point"></view>
+          <text class="tip-title">费用不包含</text>
+        </view>
+        <view class="fee-details">
+          <text class="one-line-fee" wx:for="{{dataList.good_costs}}" wx:key="index">{{index+1}}.{{item.content}}</text>
+        </view>
+      </view>
+    </view>
+  </div>
+  </scroll-view>
+
+  <!--蒙版内容-->
+  <view class="{{chosen?'hide':'hidden'}}">
+    <view class="select-date-mask" catchtap="">
+      <view class="select-date">
+        <view class="select-title border-b">
+          <text>请选择出行日期</text>
+          <view class="shut-but" catchtap="closeMask">x</view>
+        </view>
+        <scroll-view class="with-calender" scroll-y>
+          
+          <view class="calender">
+            <view class="monthTitle">
+              <div class="weui-flex">
+                <div class="weui-flex__item eachMonth {{ pos == 'one' ?'yes':'no'}}" bindtap="one">
+                {{ currentMonth }}月
+                </div>
+                <div class="weui-flex__item eachMonth {{ pos == 'two' ?'yes':'no'}}" bindtap="two">
+                  {{ currentMonth + 1 }}月
+                </div>
+                <div class="weui-flex__item eachMonth {{ pos == 'three' ?'yes':'no'}}" bindtap="three">
+                  {{ currentMonth + 2 }}月
+                </div>
+                <div class="weui-flex__item eachMonth {{ pos == 'four' ?'yes':'no'}}" bindtap="four">
+                  {{ currentMonth + 3 }}月
+                </div>
+              </div>
+            </view>
+            <view class="weekTitle">
+              <div class="weui-flex">
+                <div class="weui-flex__item eachWeek">
+                  日
+                </div>
+                <div class="weui-flex__item eachWeek">
+                  一
+                </div>
+                <div class="weui-flex__item eachWeek">
+                  二
+                </div>
+                <div class="weui-flex__item eachWeek">
+                  三
+                </div>
+                <div class="weui-flex__item eachWeek">
+                  四
+                </div>
+                <div class="weui-flex__item eachWeek">
+                  五
+                </div>
+                <div class="weui-flex__item eachWeek">
+                  六
+                </div>
+              </div>
+            </view>
+            <view wx:for="{{ empty }}" wx:key="index" class="eachday empty">
+              <view>{{ item }}</view>
+            </view>
+            <block wx:for="{{ calender }}" wx:key="index" data-index="{{index}}">
+              <view class="eachday {{item.eachBlock?'highlight':'color'}}">
+                <view class="depart" data-index="{{index}}" bindtap="highlight">
+                  <view class="cDay">{{ item.day }}</view>
+                  <view class="cPrice">{{ item.price }}</view>
+                </view>
+              </view>
+            </block>
+          </view>
+
+          <view class="traveller-num border-b">请选择出行人数</view>
+          <view class="grownups border-b">
+            <view class="traveller-title">成人</view>
+            <view class="addOrNot">
+              <view class="desc howMany" catchtap="countDesc">-</view>
+              <view class="count howMany">{{count}}</view>
+              <view class="plus howMany" catchtap="countPlus">+</view>
+            </view>
+          </view>
+          <view class="childs">
+            <view class="traveller-title">儿童</view>
+            <view class="addOrNot">
+              <view class="desc howMany" catchtap="bcountDesc">-</view>
+              <view class="count howMany">{{childCount}}</view>
+              <view class="plus howMany" catchtap="bcountPlus">+</view>
+            </view>
+          </view>
+        </scroll-view>
+        <block wx:if="{{isDayNull==false}}">
+          <button class="next-button" catchtap="fillMsg">下一步,填写信息</button>
+        </block>
+        <block wx:else>
+          <button class="next-button" catchtap="fillMsg" disabled="disabled">下一步,填写信息</button>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <view class="{{select?'hide':'hidden'}}">
+    <view class="" catchtap="buy">
+      <button class="buy-button">立即购买</button>
+    </view>
+  </view>
+</view>

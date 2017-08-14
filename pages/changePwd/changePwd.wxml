@@ -1,0 +1,22 @@
+<view class="regist-container">
+	<view class="form-block">
+	<view class="warning-msg {{survive?'hidden':'auto'}}">{{warningMsg}}</view>
+		<form method="post" action="#" name="regist">
+		<view style="background-color: white;padding: 0 24rpx;">			
+			<view class="each-line">
+				<text class="iconfont icon-yanzhengma"></text>
+				<input type="number" placeholder="请输入验证码" class="uInp short" placeholder-class="pstyle" bindchange="newCheckNode"/>
+				<button class="choose-traveller-but checkBut" bindtap="getCheckNode" disabled="{{enable}}">{{getNode}}</button>
+			</view>
+			<view class="each-line" style="border-top: 1rpx solid #d0d0d0;">
+				<text class="iconfont icon-mima"></text>
+				<input type="number" placeholder="设置新密码(至少八位)" class="uInp" password="{{visible}}" placeholder-class="pstyle" bindchange="newPwd"/>
+				<icon type="cancel" size="20" color="#d0d0d0" class="each-line-icon fright" bindtap="cache"/>
+			</view>
+		</view>
+			<view class="regist-button">
+				<button class="rButton" bindtap="resetMySecret" disabled="{{available}}">重置密码</button>
+			</view>
+		</form>
+	</view>
+</view>

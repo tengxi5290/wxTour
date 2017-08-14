@@ -1,0 +1,76 @@
+<view class="list-container">
+	<view class="banner">
+		<view class="banner-mask">
+			<view class="max-title">
+				<block wx:if="{{ listType == 'normal' }}">普通</block>
+				<block wx:elif="{{ listType == '' }}">全部</block>
+				<block wx:elif="{{ listType == 'recommend' }}">推荐</block>
+			</view>
+			<view class="max-en-title">{{listState}}</view>
+			<view class="line"></view>
+			<view class="comeon">说好的，漂洋过海来见你</view>
+		</view>
+	</view>
+
+	<view class="list-block">
+		<view class="each-list-block" wx:for="{{dataList}}" wx:key="index" bindtap="toGoods" data-index="{{index}}">
+			<view class="each-picture" style="background-image: url({{item.pictures[0].url}});"></view>
+			<view class="each-list-title">
+				<view class="kitty">
+					{{item.name}}
+				</view>
+				<view class="num-price">
+					<text class="num">已售出{{item.count}}件</text>
+					<text class="price">￥{{item.lowPrice}}起</text>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="bottom-nav">
+		<div class="weui-flex">
+			<block wx:if="{{ page == 'index' }}">
+	            <div class="weui-flex__item" bindtap="toIndex">
+	            	<view class="icon-line blocks"><text class="iconfont icon-shouye" style="color: #49bcbd;"></text></view>
+	            	<view class="word-line blocks cyan">首页</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toOrder">
+	            	<view class="icon-line blocks"><text class="iconfont icon-quanbudingdan"></text></view>
+	            	<view class="word-line blocks">订单</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toMine">
+	            	<view class="icon-line blocks"><text class="iconfont icon-wode"></text></view>
+	            	<view class="word-line blocks">我的</view>
+	            </div>
+            </block>
+            <block wx:elif="{{ page == 'order' }}">
+	            <div class="weui-flex__item" bindtap="toIndex">
+	            	<view class="icon-line blocks"><text class="iconfont icon-shouye"></text></view>
+	            	<view class="word-line blocks">首页</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toOrder">
+	            	<view class="icon-line blocks"><text class="iconfont icon-quanbudingdan"></text></view>
+	            	<view class="word-line blocks cyan">订单</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toMine">
+	            	<view class="icon-line blocks"><text class="iconfont icon-wode"></text></view>
+	            	<view class="word-line blocks">我的</view>
+	            </div>
+            </block>
+            <block wx:elif="{{ page == 'mine' }}">
+	            <div class="weui-flex__item" bindtap="toIndex">
+	            	<view class="icon-line blocks"><text class="iconfont icon-shouye"></text></view>
+	            	<view class="word-line blocks">首页</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toOrder">
+	            	<view class="icon-line blocks"><text class="iconfont icon-quanbudingdan"></text></view>
+	            	<view class="word-line blocks">订单</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toMine">
+	            	<view class="icon-line blocks"><text class="iconfont icon-wode"></text></view>
+	            	<view class="word-line blocks cyan">我的</view>
+	            </div>
+            </block>
+        </div>
+	</view>
+</view>

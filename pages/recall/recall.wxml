@@ -1,0 +1,14 @@
+<view class="need-container">
+	<view class="need-tips">感谢您的反馈，对于您的意见和建议，我们将认真对待，并视情况予以回复！</view>
+	<form name="need-form" action="#" method="get">
+		<view class="textarea-block">
+			<textarea bindinput="getLength" placeholder="输入意见反馈" placeholder-class="place-holder" class="text-zone" maxlength="{{length}}" disabled="{{disable}}" value="{{text}}" />
+			<text class="attention">{{cLength}}/{{tLength}}字</text>
+		</view>
+
+		<view class="button-group">
+			<button class="text-but cancel" form-type="reset">取消</button>
+			<button class="text-but submit" form-type="submit" bindtap="submitting">提交</button>
+		</view>
+	</form>
+</view>

@@ -1,0 +1,61 @@
+<!--pages/coupon/coupon.wxml-->
+<view class="coupon-container">
+	<block wx:if="{{ status == 'usable' }}">
+		<block wx:for="{{couponList}}" wx:key="index">
+			<block wx:if="{{item.status == 'usable' }}">
+				<view class="usable-coupon">
+					<view class="coupon-used withBorder">
+						<view class="used-state-block">
+							<view class="used-state desc-price">-￥{{item.price}}</view>
+						</view>
+						<view class="coupon-price-block">
+							<view class="top-line-coupon">
+								<text class="coupon-state">{{item.tips}}</text>
+								<!-- <text class="coupon-price">￥1254</text> -->
+							</view>
+							<view class="bottom-line-coupon">
+								<view class="coupon-range">有效期：{{item.begining}}至{{item.deadline}}</view>
+							</view>
+						</view>
+
+						<view class="useOrNot">
+							<view class="cancelOrNot" bindtap="use" data-index="{{index}}">使用</view>
+						</view>
+					</view>
+				</view>
+			</block>
+			<block wx:elif="{{item.status == 'used' }}">
+				<view class="coupon-used">
+					<view class="used-state-block">
+						<view class="used-state">
+							已使用
+						</view>
+					</view>
+					<view class="coupon-price-block">
+						<view class="top-line-coupon">
+							<text class="coupon-state">{{item.tips}}</text>
+							<text class="coupon-price">-￥{{item.price}}</text>
+						</view>
+						<view class="bottom-line-coupon">
+							<view class="coupon-range">有效期：{{item.begining}}至{{item.deadline}}</view>
+						</view>
+					</view>
+					<view class="useOrNot" bindtap="cancelCoupon" data-index="{{index}}">
+						<view class="cancelOrNot">取消</view>
+					</view>
+				</view>
+			</block>
+		</block>
+	</block>
+
+	<!-- <block wx:else> -->
+		<view class="inp-wrapper">
+	        <input class="coupon-inp" name="cInp" id="cInp" placeholder="输入优惠券" placeholder-class="light" bindchange="comeOn" />
+	        <button class="check-coupon" bindtap="couponCheck">验证</button>
+	    </view>
+	<!-- </block>  -->
+
+	<view class="sSureBut">
+        <button class="surebut" bindtap="selectCoupon">确定</button>
+    </view>
+</view>

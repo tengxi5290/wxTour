@@ -1,0 +1,122 @@
+<scroll-view scroll-y class="order-container" bindscroll="scrollVerticle">
+	<view class="navigator {{fix?'fixed':'relative'}}">
+		<div class="weui-flex">
+      <div class="weui-flex__item">
+      	<text class="each-nav {{state == '' ?'yes':'no'}}" bindtap="all">全部</text>
+      </div>
+      <div class="weui-flex__item">
+      	<text class="each-nav {{state == 'before_tour' ?'yes':'no'}}" bindtap="underGo">未出行</text>
+      </div>
+      <div class="weui-flex__item">
+      	<text class="each-nav {{state == 'before_pay'?'yes':'no'}}" bindtap="underPay">待支付</text>
+      </div>
+      <div class="weui-flex__item">
+      	<text class="each-nav {{state == 'refunded'?'yes':'no'}}" bindtap="repayList">退款单</text>
+      </div>
+    </div>
+	</view>
+
+	<block wx:for="{{listData}}" wx:key="index">
+		<view class="orders-blocks" bindtap="listDetail" data-index="{{index}}">
+			<view class="each-order-block">
+				<view class="border-top-part">
+					<view class="order-icon cyan-icon"><text class="iconfont icon-dujia"></text></view>
+					<view class="order-title title-black">{{item.name}}</view>
+					<view class="price-state">
+						<view class="order-price normal-price">￥{{item.total_price}}</view>
+						<view class="order-state state-grey">
+							<block wx:if="{{ item.status == 'before_pay' }}">
+								<text>待支付</text>
+							</block>
+							<block wx:elif="{{ item.status == 'before_tour' }}">
+								<text>未出行</text>
+							</block>
+							<block wx:elif="{{ item.status == 'complete' }}">
+								<text>已出行</text>
+							</block>
+							<block wx:elif="{{ item.status == 'cancel' }}">
+								<text>已取消</text>
+							</block>
+							<block wx:elif="{{ item.status == 'refunded' }}">
+								<text>已退款</text>
+							</block>
+						</view>
+					</view>
+					<view class="order-details state-grey">{{item.format}} {{item.day}}天{{item.day-1}}晚</view>
+					<view class="leave-port state-grey">{{item.port}}出发</view>
+				</view>
+				<view class="border-bottom-part" wx:if="{{ item.status == 'before_pay' }}">
+					<button class="order-but but-usable" catchtap="pay" data-index="{{index}}">立即支付</button>
+				</view>
+				<view class="border-bottom-part" wx:if="{{ item.status == 'before_tour' }}">
+					<button class="order-but but-mright but-disable" catchtap="repay" data-index="{{index}}">申请退款</button>
+					<button class="order-but but-usable" bindtap="orderDetails" data-index="{{index}}">订单详情</button>
+				</view>
+				<view class="border-bottom-part" wx:if="{{ item.status == 'complete' }}">
+					<button class="order-but but-mright but-disable" catchtap="deleteOrder" data-index="{{index}}">删除</button>
+					<button class="order-but but-usable" bindtap="orderDetails" data-index="{{index}}">订单详情</button>
+				</view>
+				<view class="border-bottom-part" wx:if="{{ item.status == 'cancel' }}">
+					<button class="order-but but-mright but-disable" catchtap="deleteOrder" data-index="{{index}}">删除</button>
+					<button class="order-but but-usable" bindtap="orderDetails" data-index="{{index}}">订单详情</button>
+				</view>
+				<view class="border-bottom-part" wx:if="{{ item.status == 'refunded' }}">
+					<button class="order-but but-mright but-disable" catchtap="deleteOrder" data-index="{{index}}">删除</button>
+					<button class="order-but but-usable" bindtap="repayDetails" data-index="{{index}}">退款详情</button>
+				</view>
+			</view>
+		</view>
+	</block>
+
+	<view class="bottom-nav">
+		<div class="weui-flex">
+			<block wx:if="{{ page == 'index' }}">
+	            <div class="weui-flex__item" bindtap="toIndex">
+	            	<view class="icon-line blocks"><text class="iconfont icon-shouye"></text></view>
+	            	<view class="word-line blocks cyan">首页</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toOrder">
+	            	<view class="icon-line blocks"><text class="iconfont icon-quanbudingdan"></text></view>
+	            	<view class="word-line blocks">订单</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toMine">
+	            	<view class="icon-line blocks"><text class="iconfont icon-wode"></text></view>
+	            	<view class="word-line blocks">我的</view>
+	            </div>
+            </block>
+            <block wx:elif="{{ page == 'order' }}">
+	            <div class="weui-flex__item" bindtap="toIndex">
+	            	<view class="icon-line blocks"><text class="iconfont icon-shouye"></text></view>
+	            	<view class="word-line blocks">首页</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toOrder">
+	            	<view class="icon-line blocks"><text class="iconfont icon-quanbudingdan" style="color: #49bcbd;"></text></view>
+	            	<view class="word-line blocks cyan">订单</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toMine">
+	            	<view class="icon-line blocks"><text class="iconfont icon-wode"></text></view>
+	            	<view class="word-line blocks">我的</view>
+	            </div>
+            </block>
+            <block wx:elif="{{ page == 'mine' }}">
+	            <div class="weui-flex__item" bindtap="toIndex">
+	            	<view class="icon-line blocks"><text class="iconfont icon-shouye"></text></view>
+	            	<view class="word-line blocks">首页</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toOrder">
+	            	<view class="icon-line blocks"><text class="iconfont icon-quanbudingdan"></text></view>
+	            	<view class="word-line blocks">订单</view>
+	            </div>
+	            <div class="weui-flex__item" bindtap="toMine">
+	            	<view class="icon-line blocks"><text class="iconfont icon-wode"></text></view>
+	            	<view class="word-line blocks cyan">我的</view>
+	            </div>
+            </block>
+        </div>
+	</view>
+
+	<view class="noTips">
+		<text class="iconfont icon-wudingdan"></text>
+		<view class="tipsWords">暂无订单</view>
+	</view>
+</scroll-view>

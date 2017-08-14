@@ -1,0 +1,11 @@
+<view class="newpwd-container">
+	<radio-group class="radio-group" bindchange="radioChange">
+	  <label class="radio eachRadio" wx:for="{{items}}" wx:key="index">
+	    <radio value="{{item.name}}" checked="{{item.checked}}" color="#49bcbd"/>{{item.value}}
+	  </label>
+	</radio-group>
+
+	<view class="save-container">
+		<button class="save" bindtap="save">保存</button>
+	</view>
+</view>
